@@ -1,6 +1,6 @@
 ! Title: mylist
-! Version: 1.266
-! Description: 나만 쓸겁니다.
+! Version: 1.266x
+! Description: my adblock rules
 
 
 ###id_mbv
@@ -10,15 +10,13 @@
 ##.goBack
 ##.moveTop
 ##.m-advert-wrap.wrap
-! ##[class*='ewsletter']
 ##[class*='ubscri']:has-text(/구독|후원|기부/)
 ##[class*='upport']:has-text(/구독|후원|기부/)
-##[href*="//v.daum.net/channel/"]
-! ##[id*='ewsletter']
+##[href*="/v.daum.net/channel/"]
 ##[id*='ubscri']:has-text(/구독|후원|기부/)
 ##[id*='upport']:has-text(/구독|후원|기부/)
-##[src*="//a.magsrv.com/"]
-##[src*="//adshare.kr/"]
+##[src*="/a.magsrv.com/"]
+##[src*="/adshare.kr/"]
 ##li.treeview > .old:has-text(보증토토)
 $removeparam=/^(jaehuid|cto_pld)=/,domain=gmarket.co.kr
 $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
@@ -27,10 +25,9 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@$extension="Eruda Dynamic",domain=m.blog.naver.com|m.cafe.naver.com|arca.live
 @@$extension="Immersive Translate - Translate Web & PDF",domain=naver.com|daum.net|namu.wiki|coupang.com|dcinside.com|kakao.com|tistory.com|nate.com|donga.com|ruliweb.com|chosun.com|samsung.com|arca.live|clien.net|ssg.com|postype.com|theqoo.net|danawa.com|hasha.in|yande.re
 @@$extension="Scroll to top",app=com.sec.android.app.sbrowser|com.sec.android.app.sbrowser.beta
-@@$extension="Scroll to top",domain=namu.wiki
 ! @@$extension="e-hentai preload next page"|"Arca Refresher",app=com.kiwibrowser.browser|org.mozilla.firefox|com.lemurbrowser.exts
 @@$extension="隱藏網頁要求通知權限",domain=dcinside.com
-@@$extension="웹 사이트에서 이미지 해상도 오버레이 표시",domain=comic.naver.com|lezhin.com|toomics.com|toptoon.com|webtoon.kakao.com|page.kakao.com|series.naver.com|toptoon.com|toomics.com|babechat.ai
+@@$extension="웹 사이트에서 이미지 해상도 오버레이 표시",domain=comic.naver.com|lezhin.com|toomics.com|toptoon.com|webtoon.kakao.com|page.kakao.com|series.naver.com|toptoon.com|toomics.com|babechat.ai|
 @@$popup,domain=arca.live
 @@$stealth=useragent,app=org.mozilla.firefox
 ! for only window @@$stealth=useragent,domain=hasha.in
@@ -45,7 +42,7 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@||client-rapi-missav.recombee.com^
 @@||commutil.kr/phpwas/$image
 @@||d3aulf22blzf9p.cloudfront.net^$app=com.deaguowl.fallcent
-@@||google-analytics.com/analytics.js$script,domain=uniqlo.com
+@@||google-analytics.com/analytics.js$script,domain=uniqlo.com|m.dcinside.com
 @@||google-analytics.com/gtm/js^$domain=uniqlo.com
 @@||m.dcinside.com/ajax/*naverad
 @@||metrics.us.playstation.com/b/ss/
@@ -98,9 +95,9 @@ gongyoungshop.kr###homeFloating
 goodnews365.net###support-box
 google.*,google.com,google.co.kr###rso > div[class]:has-text(/€|₩|co.za/):has-text(.0):has(span):has(svg):not([id])
 google.*,google.com,google.co.kr###rso > div[class]:has-text(/edu.pl|pila.pl/):has(span):has(svg):not([id])
-google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(.in):has-text(.0)
-google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(/edu.pl|pila.pl/)
-google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(/€|₩|co.za/):has-text(.0)
+google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(.in):has-text(.0):has(svg)
+google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(/edu.pl|pila.pl/):has(svg)
+google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(/€|₩|co.za/):has-text(.0):has(svg)
 hasha.in###root > div[class]
 humors.zigcou.com###zigcou_99_Minarticletop_300_250
 humors.zigcou.com##[src^="https://img.coucounews.com/"]
@@ -116,6 +113,7 @@ instiz.net#%#//scriptlet('href-sanitizer', 'a[href^="javascript:link"]')
 isplus.com##div.mt_40.py_40.bg_999.center_1024
 item.cjonstyle.com##.buy_info > .text
 item.cjonstyle.com##.pgm_banner
+javhd168.com#%#//scriptlet('set-constant', 'asVideoJson', 'emptyObj')
 joara.com##.book-preview-guide
 joara.com##.mw-view-guide-wrap.view-guide-wrap
 joara.com##.popup-swiper.react-modal-sheet-container
@@ -140,7 +138,7 @@ m.betanews.net##div#adshow
 m.blog.naver.com###blog_fe_feed > div:has-text(/다른 글|디깅하기|주제 더보기/)
 m.cafe.daum.net##li.nativead-placeholder
 m.cafe.naver.com##.FloatingJoinButton.DefaultButton
-m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까?|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|yna.co.kr|kmib.co.kr|거부함|거부자|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새/)
+m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|yna.co.kr|kmib.co.kr|거부함|거부자|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새/)
 m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('
 ')[0].trim();link.setAttribute('href',url);});});
 m.dongascience.com###letter_apply
@@ -418,7 +416,6 @@ $removeparam=t,domain=duckduckgo.com
 @@||challenges.cloudflare.com^$stealth,badfilter
 @@||connect.facebook.net^$script,domain=mt.co.kr
 @@||dcimg*.dcinside.co.kr^$stealth=dpi
-@@||dcinside.com^$cookie=_ga
 @@||firebaselogging-pa.googleapis.com^
 @@||firebaselogging.googleapis.com^
 @@||fonts.googleapis.com^$app=com.shinhan.o2o
@@ -431,6 +428,7 @@ $removeparam=t,domain=duckduckgo.com
 @@||graph.facebook.com^$domain=fmkorea.com
 @@||imasdk.googleapis.com/js/sdkloader/*.js$script,domain=ted.com|bloomberg.org
 @@||img.hellocdn*.net^$stealth=referrer
+@@||m.dcinside.com$cookie=_ga
 @@||ourhome.co.kr^$stealth=dpi
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=apkmirror.com|devliberty.blogspot.com
 @@||reddit.com^$removeparam=rdt,app=com.mycompany.app.soulbrowser
@@ -645,7 +643,7 @@ fmkorea.com##.notice_layerM.notice_layer
 fmkorea.com##.politics_pop_main.pop_main
 fmkorea.com##.show_folded_notice.pop0.notice
 fmkorea.com##li.pop0.clear.notice
-fmkorea.com##li:has-text(/LoL|페이커/대 상 혁)
+fmkorea.com##li:has-text(/LoL|페이커/대 상 혁|롤드컵/)
 fmkorea.com#$##bd_capture { background: none!important; }
 fnnews.com###mlist_add
 fnnews.com##.view > div:not(*:has([class]))
@@ -687,8 +685,8 @@ google.*,google.com,google.co.kr##[id] [href*='tbm=bks']:has-text(도서)
 google.*,google.com,google.co.kr##[id] [href*='tbm=shop']:has-text(쇼핑)
 google.*,google.com,google.co.kr##[id] [href*='udm=39']:has-text(짧은 동영상)
 google.*,google.com,google.co.kr##[id^="eob_"]
-google.*,google.com,google.co.kr##[id^=arc-srp] > div > div[class]:has([href*='facebook.com'])
-google.*,google.com,google.co.kr##[id^=arc-srp] > div > div[class]:has([href*='play.google.com'])
+google.*,google.com,google.co.kr##[id^=arc-srp] > div > div[class]:has([href*='facebook.com']):has(svg)
+google.*,google.com,google.co.kr##[id^=arc-srp] > div > div[class]:has([href*='play.google.com']):has(svg)
 google.*,google.com,google.co.kr##omnient-visibility-control
 gparts.co.kr##[src*="/images/mobile/favor_nologin.png"]
 grip.show##[class$='-header']
@@ -773,6 +771,7 @@ isplus.com##.line_bottom.title_box:has-text(행사& 비즈니스)
 isplus.com##.swiper-backface-hidden.swiper-horizontal.swiper-initialized.sw_banner.swiper
 item.cjonstyle.com###wrap > .goto_app_layer_popup
 j9dan.com###nt_sticky_wrap > center
+jeollailbo.com##[id^='dcamp_ad_']
 jimnong.tistory.com###loading
 jmagazine.joins.com##.side_banner
 joongang.co.kr##.for_login.plotting_mini.login_proposal.plotting_popup.layer_dark_popup
@@ -800,6 +799,7 @@ kormedi.com##div[class='subscr-btn-box']
 kpanews.co.kr##.admbt_close.view-m.main.ad_mobile
 kream.co.kr###modal-layer
 kream.co.kr,academy.prompie.com,11st.co.kr##[class*='app-down']
+kurly.com##svg:upward(2):has-text(지금 가입하고)
 kwangdongmart.com###marketingFirstAgreePopup
 kwnews.co.kr##.wcms_bestnews > ul
 kyeongin.com##[src^="images/mobile_banner.jpg"]
