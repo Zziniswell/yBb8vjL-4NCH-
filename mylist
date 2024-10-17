@@ -27,7 +27,7 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@$extension="Scroll to top",app=com.sec.android.app.sbrowser|com.sec.android.app.sbrowser.beta
 ! @@$extension="e-hentai preload next page"|"Arca Refresher",app=com.kiwibrowser.browser|org.mozilla.firefox|com.lemurbrowser.exts
 @@$extension="隱藏網頁要求通知權限",domain=dcinside.com
-@@$extension="웹 사이트에서 이미지 해상도 오버레이 표시",domain=comic.naver.com|lezhin.com|toomics.com|toptoon.com|webtoon.kakao.com|page.kakao.com|series.naver.com|toptoon.com|toomics.com|babechat.ai|
+@@$extension="웹 사이트에서 이미지 해상도 오버레이 표시",domain=comic.naver.com|lezhin.com|toomics.com|toptoon.com|webtoon.kakao.com|page.kakao.com|series.naver.com|toptoon.com|toomics.com|babechat.ai
 @@$popup,domain=arca.live
 @@$stealth=useragent,app=org.mozilla.firefox
 ! for only window @@$stealth=useragent,domain=hasha.in
