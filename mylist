@@ -1,5 +1,5 @@
 ! Title: mylist
-! Version: 1.266x
+! Version: 1.266y
 ! Description: my adblock rules
 
 
@@ -42,7 +42,7 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@||client-rapi-missav.recombee.com^
 @@||commutil.kr/phpwas/$image
 @@||d3aulf22blzf9p.cloudfront.net^$app=com.deaguowl.fallcent
-@@||google-analytics.com/analytics.js$script,domain=uniqlo.com|m.dcinside.com
+@@||google-analytics.com/analytics.js$script,domain=uniqlo.com
 @@||google-analytics.com/gtm/js^$domain=uniqlo.com
 @@||m.dcinside.com/ajax/*naverad
 @@||metrics.us.playstation.com/b/ss/
@@ -139,8 +139,7 @@ m.blog.naver.com###blog_fe_feed > div:has-text(/다른 글|디깅하기|주제 �
 m.cafe.daum.net##li.nativead-placeholder
 m.cafe.naver.com##.FloatingJoinButton.DefaultButton
 m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|yna.co.kr|kmib.co.kr|거부함|거부자|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새/)
-m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('
-')[0].trim();link.setAttribute('href',url);});});
+m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('<br>')[0].trim();link.setAttribute('href',url);});});
 m.dongascience.com###letter_apply
 m.dongascience.com###view_tag_news > .wrap
 m.dongascience.com##.tag
@@ -238,8 +237,6 @@ zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.
 ||analytics-*.i-nahee.com^
 ||ceoscoredaily.com/api.php$document,xhr
 ||govkorea24.com^
-||json*.dcinside.com/json*/app_ad_charge.php
-||json*.dcinside.com/json*/app_ad_setting.php
 ||js.monitor.azure.com^
 ||kimppan.com/api/user/CreateVisitLog
 ||my.musinsa.com/api/member/v1/login-status$xhr
@@ -416,6 +413,7 @@ $removeparam=t,domain=duckduckgo.com
 @@||challenges.cloudflare.com^$stealth,badfilter
 @@||connect.facebook.net^$script,domain=mt.co.kr
 @@||dcimg*.dcinside.co.kr^$stealth=dpi
+@@||dcinside.com$cookie=_ga
 @@||firebaselogging-pa.googleapis.com^
 @@||firebaselogging.googleapis.com^
 @@||fonts.googleapis.com^$app=com.shinhan.o2o
@@ -428,7 +426,6 @@ $removeparam=t,domain=duckduckgo.com
 @@||graph.facebook.com^$domain=fmkorea.com
 @@||imasdk.googleapis.com/js/sdkloader/*.js$script,domain=ted.com|bloomberg.org
 @@||img.hellocdn*.net^$stealth=referrer
-@@||m.dcinside.com$cookie=_ga
 @@||ourhome.co.kr^$stealth=dpi
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=apkmirror.com|devliberty.blogspot.com
 @@||reddit.com^$removeparam=rdt,app=com.mycompany.app.soulbrowser
@@ -1327,7 +1324,6 @@ zum.com##.show.btn-app-go
 ||cxcs.microsoft.net/api/teamsgrowth/en-us/json/whatsnew/edu/student/whats-new
 ||da.ge^
 ||datadog.pool.ntp.org^
-||dcinside.com/*/app_ad_
 ||delivery.2d.net.co^
 ||delivery.pryzmads.com^
 ||digitalcamp.co.kr^
