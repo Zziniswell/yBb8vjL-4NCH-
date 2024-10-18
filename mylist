@@ -1,5 +1,5 @@
 ! Title: mylist
-! Version: 1.266y
+! Version: 1.267
 ! Description: my adblock rules
 
 
@@ -22,8 +22,8 @@ $removeparam=/^(jaehuid|cto_pld)=/,domain=gmarket.co.kr
 $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 101soundboards.com##.publift_in_content_1
 @@$extension="Auto Simya",domain=arca.live
-@@$extension="Eruda Dynamic",domain=m.blog.naver.com|m.cafe.naver.com|arca.live
-@@$extension="Immersive Translate - Translate Web & PDF",domain=naver.com|daum.net|namu.wiki|coupang.com|dcinside.com|kakao.com|tistory.com|nate.com|donga.com|ruliweb.com|chosun.com|samsung.com|arca.live|clien.net|ssg.com|postype.com|theqoo.net|danawa.com|hasha.in|yande.re
+@@$extension="Eruda Dynamic",domain=m.blog.naver.com|m.cafe.naver.com|arca.live|yande.re|danbooru.donmai.us
+@@$extension="Immersive Translate - Translate Web & PDF",domain=naver.com|daum.net|namu.wiki|coupang.com|dcinside.com|kakao.com|tistory.com|nate.com|donga.com|ruliweb.com|chosun.com|samsung.com|arca.live|clien.net|ssg.com|postype.com|theqoo.net|danawa.com|hasha.in|yande.re|danbooru.donmai.us
 @@$extension="Scroll to top",app=com.sec.android.app.sbrowser|com.sec.android.app.sbrowser.beta
 ! @@$extension="e-hentai preload next page"|"Arca Refresher",app=com.kiwibrowser.browser|org.mozilla.firefox|com.lemurbrowser.exts
 @@$extension="隱藏網頁要求通知權限",domain=dcinside.com
@@ -50,6 +50,7 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@||onelink.me^$popup,doc
 @@||richtv*.com^$stealth=referrer
 @@||stacksocial.com^$cookie=ajs_anonymous_id
+aagag.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 adguard.com##.flash-wrapper-wrap
 arca.live#%#window.addEventListener('load',function(){document.querySelectorAll('a.external').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();window.location.href=this.href})});var removeModal=function(){var m=document.querySelector('.microModal');m&&m.parentNode.removeChild(m)};removeModal();new MutationObserver(function(mutations){mutations.forEach(function(){removeModal()})}).observe(document.body,{childList:true,subtree:true})});
 arca.live#%#function updateExternalLinks(){document.querySelectorAll('a.external').forEach(function(a){var h=a.href;if(h.startsWith('https://unsafelink.com/')){a.href=h.replace('https://unsafelink.com/','').replace(/^http:\/\//,'https://')}})}window.addEventListener('load',updateExternalLinks);window.addEventListener('hashchange',updateExternalLinks);
@@ -129,11 +130,6 @@ lawissue.co.kr##.wrap > *:not([class]):not(div:nth-of-type(4))
 lawtimes.co.kr###__next > div > div:first-child:has(svg)
 lezhin.com##.cutLicense.cut
 lotteon.com##.recommendInfinitiWrap
-m.11st.co.kr##div.l-grid:nth-of-type(7) > div.l-grid__row:nth-of-type(1) > .l-grid__col--12.l-grid__col > .c-headline--low.c-headline > .c-headline__text > .c-headline__title
-m.11st.co.kr##div.l-grid:nth-of-type(7) > div.l-grid__row:nth-of-type(2)
-m.11st.co.kr##div.l-grid:nth-of-type(8) > div.l-grid__row:nth-of-type(1) > .l-grid__col--12.l-grid__col > .c-headline--low.c-headline > .c-headline__text > .c-headline__title
-m.11st.co.kr##div.l-grid__row:nth-of-type(2) > .l-grid__col--12.l-grid__col > .c-content-box
-m.11st.co.kr###tabPanel-btf-0 > div.l-grid:nth-of-type(4) > .l-grid__row > .l-grid__col--12.l-grid__col
 m.betanews.net##div#adshow
 m.blog.naver.com###blog_fe_feed > div:has-text(/다른 글|디깅하기|주제 더보기/)
 m.cafe.daum.net##li.nativead-placeholder
@@ -187,6 +183,7 @@ paxnet.co.kr##.m-tag-banner
 politico.eu##.ad
 politico.eu##[class^='ad_']
 pping.kr##.swiper-slide-active.swiper-slide > div:first-child
+ppomppu.co.kr##li:has(.type3.board_notice)
 quora.com###root > .q-box > .q-box > div.q-box > div:has-text(Sign Up to learn more)
 reddit.*##[bundlename="nsfw_blocking_modal"]:remove()
 reddit.*##body:has(> shreddit-app > shreddit-async-loader[bundlename="app_selector"]):style(overflow: auto !important; pointer-events: auto !important;)
@@ -234,12 +231,16 @@ webtool.cusis.net#@#[class*='upport']:has-text(/구독|후원|기부/)
 yna.co.kr#%#//scriptlet('prevent-fetch', 'scr.nsmartad.com')
 zdnet.co.kr##.top_line
 zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.5em !important; }
+||adcr.naver.com^$all
+||ad.danawa.com/RealMedia/ads/adstream_lx.ads/
 ||analytics-*.i-nahee.com^
 ||ceoscoredaily.com/api.php$document,xhr
 ||govkorea24.com^
+||insight.danawa.com/InsightTrk/tracker^
 ||js.monitor.azure.com^
 ||kimppan.com/api/user/CreateVisitLog
 ||my.musinsa.com/api/member/v1/login-status$xhr
+||namu.wiki/sidebar.json$domain=namu.wiki
 ||naver.com/jackpotlog/*/logs$xhr
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,domain=battlecats-db.com
 ||sentry-apollo-fe.naver.com^
@@ -438,7 +439,6 @@ $removeparam=t,domain=duckduckgo.com
 a-bly.com##.app-persuade-drawer.drawer
 a-bly.com##.navigation-bar__banner.navigation-bar__row
 a-ha.io##[class]:has-text(만족스러운 답변이었나요?):not([class]:has(p))
-aagag.com###container > .top.la
 abcmart.a-rt.com##[id^='dialogContainer']
 abcmart.a-rt.com,community.samsung.com##.ui-widget-overlay
 academy.prompie.com###academyMainModal
@@ -640,7 +640,7 @@ fmkorea.com##.notice_layerM.notice_layer
 fmkorea.com##.politics_pop_main.pop_main
 fmkorea.com##.show_folded_notice.pop0.notice
 fmkorea.com##li.pop0.clear.notice
-fmkorea.com##li:has-text(/LoL|페이커/대 상 혁|롤드컵/)
+fmkorea.com##li:has-text(/LoL|페이커|대 상 혁|롤드컵|경기움짤/)
 fmkorea.com#$##bd_capture { background: none!important; }
 fnnews.com###mlist_add
 fnnews.com##.view > div:not(*:has([class]))
