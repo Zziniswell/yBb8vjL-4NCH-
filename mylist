@@ -1,15 +1,16 @@
 ! Title: mylist
-! Version: 1.267
+! Version: 1.268
 ! Description: my adblock rules
 
 
+! for only window @@$stealth=useragent,domain=hasha.in
 ###id_mbv
 ###main-banner-view > div:first-child
 ##.alert_windows
 ##.clearfix > li:has(> *:has-text(보증토토))
 ##.goBack
-##.moveTop
 ##.m-advert-wrap.wrap
+##.moveTop
 ##[class*='ubscri']:has-text(/구독|후원|기부/)
 ##[class*='upport']:has-text(/구독|후원|기부/)
 ##[href*="/v.daum.net/channel/"]
@@ -18,6 +19,7 @@
 ##[src*="/a.magsrv.com/"]
 ##[src*="/adshare.kr/"]
 ##li.treeview > .old:has-text(보증토토)
+#@#.appBanner:not(body)
 $removeparam=/^(jaehuid|cto_pld)=/,domain=gmarket.co.kr
 $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 101soundboards.com##.publift_in_content_1
@@ -25,12 +27,10 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@$extension="Eruda Dynamic",domain=m.blog.naver.com|m.cafe.naver.com|arca.live|yande.re|danbooru.donmai.us
 @@$extension="Immersive Translate - Translate Web & PDF",domain=naver.com|daum.net|namu.wiki|coupang.com|dcinside.com|kakao.com|tistory.com|nate.com|donga.com|ruliweb.com|chosun.com|samsung.com|arca.live|clien.net|ssg.com|postype.com|theqoo.net|danawa.com|hasha.in|yande.re|danbooru.donmai.us
 @@$extension="Scroll to top",app=com.sec.android.app.sbrowser|com.sec.android.app.sbrowser.beta
-! @@$extension="e-hentai preload next page"|"Arca Refresher",app=com.kiwibrowser.browser|org.mozilla.firefox|com.lemurbrowser.exts
 @@$extension="隱藏網頁要求通知權限",domain=dcinside.com
 @@$extension="웹 사이트에서 이미지 해상도 오버레이 표시",domain=comic.naver.com|lezhin.com|toomics.com|toptoon.com|webtoon.kakao.com|page.kakao.com|series.naver.com|toptoon.com|toomics.com|babechat.ai
 @@$popup,domain=arca.live
 @@$stealth=useragent,app=org.mozilla.firefox
-! for only window @@$stealth=useragent,domain=hasha.in
 @@.kr^$extension="Immersive Translate - Translate Web & PDF"
 @@korea$extension="Immersive Translate - Translate Web & PDF"
 @@toki*.*/$extension="웹 사이트에서 이미지 해상도 오버레이 표시"|"Immersive Translate - Translate Web & PDF"
@@ -50,17 +50,19 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@||onelink.me^$popup,doc
 @@||richtv*.com^$stealth=referrer
 @@||stacksocial.com^$cookie=ajs_anonymous_id
+a-ha.io##.ptr__children > div > div > [src]:upward(2)
 aagag.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
+aagag.com#@#ins.adsbygoogle[data-ad-slot]
 adguard.com##.flash-wrapper-wrap
-arca.live#%#window.addEventListener('load',function(){document.querySelectorAll('a.external').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();window.location.href=this.href})});var removeModal=function(){var m=document.querySelector('.microModal');m&&m.parentNode.removeChild(m)};removeModal();new MutationObserver(function(mutations){mutations.forEach(function(){removeModal()})}).observe(document.body,{childList:true,subtree:true})});
 arca.live#%#function updateExternalLinks(){document.querySelectorAll('a.external').forEach(function(a){var h=a.href;if(h.startsWith('https://unsafelink.com/')){a.href=h.replace('https://unsafelink.com/','').replace(/^http:\/\//,'https://')}})}window.addEventListener('load',updateExternalLinks);window.addEventListener('hashchange',updateExternalLinks);
+arca.live#%#window.addEventListener('load',function(){document.querySelectorAll('a.external').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();window.location.href=this.href})});var removeModal=function(){var m=document.querySelector('.microModal');m&&m.parentNode.removeChild(m)};removeModal();new MutationObserver(function(mutations){mutations.forEach(function(){removeModal()})}).observe(document.body,{childList:true,subtree:true})});
 auction.co.kr##.component--sponsor_link.component
 auction.co.kr##.vip-togetheritems
 betanews.net###csource
 blog.naver.com,comic.naver.com##[class^='banner_area']
 bntnews.co.kr##.align-center.youtubeWrap.image
-businesspost.co.kr##.sideNav
 businesspost.co.kr###businesspeople
+businesspost.co.kr##.sideNav
 clien.net#%#//scriptlet('href-sanitizer', 'a[href^="https://link.coupang.com/"]')
 clien.net#%#//scriptlet('href-sanitizer', 'a[href^="https://s.click.aliexpress.com/"]')
 coolenjoy.net#%#//scriptlet('href-sanitizer', 'a[href^="https://coolenjoy.net/bbs/link2.php?"]')
@@ -86,6 +88,7 @@ dmitory.com##[class^='google_']
 donga.com###app_msg
 duckduckgo.com##.footer > div:nth-of-type(1)
 eomisae.co.kr#%#//scriptlet('href-sanitizer', 'a[href*="11st.co.kr"]')
+forbes.com##[id^='-ad-']
 game.naver.com##[class^='naverAlarm_popupNaverAlarm__']
 ggul.zal.kr#%#window.onload=function(){(function(){"use strict";const v=document.getElementById("bo_v_atc")||document.getElementById("inner-content-body");if(v){v.classList.remove("omit_wrap","hided");v.style.maxHeight="unset";}})();};
 ggulmo.com##div.css-1ct6olp
@@ -94,8 +97,8 @@ gmarket.co.kr##.box__component-sponsor-link.box__component
 gmarket.co.kr##.js-impressionable.image
 gongyoungshop.kr###homeFloating
 goodnews365.net###support-box
-google.*,google.com,google.co.kr###rso > div[class]:has-text(/€|₩|co.za/):has-text(.0):has(span):has(svg):not([id])
 google.*,google.com,google.co.kr###rso > div[class]:has-text(/edu.pl|pila.pl/):has(span):has(svg):not([id])
+google.*,google.com,google.co.kr###rso > div[class]:has-text(/€|₩|co.za/):has-text(.0):has(span):has(svg):not([id])
 google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(.in):has-text(.0):has(svg)
 google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(/edu.pl|pila.pl/):has(svg)
 google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(/€|₩|co.za/):has-text(.0):has(svg)
@@ -126,6 +129,7 @@ kin.naver.com##.expertRecommend
 kiosk.ac###welcome-dialog:remove()
 klauncher.kr#%#//scriptlet('set-constant', '_0x3aa5', 'noopFunc')
 kmib.co.kr,ajunews.com,dongascience.com,sports.chosun.com##[id^='ad']
+kormedi.com#@#[class*='ubscri']:has-text(/구독|후원|기부/)
 lawissue.co.kr##.wrap > *:not([class]):not(div:nth-of-type(4))
 lawtimes.co.kr###__next > div > div:first-child:has(svg)
 lezhin.com##.cutLicense.cut
@@ -190,8 +194,8 @@ reddit.*##body:has(> shreddit-app > shreddit-async-loader[bundlename="app_select
 reddit.*##xpromo-untagged-content-blocking-modal:remove()
 reddit.com###main-content > .absolute
 reddit.com##shreddit-async-loader[bundlename="app_selector"]
-reuters.com##[class^='refinitiv-promo-bar__container__']
 reuters.com##[class*='site-header__inner-sticky__']:style(position:static!important;)
+reuters.com##[class^='refinitiv-promo-bar__container__']
 ruliweb.com#%#//scriptlet('href-sanitizer', 'a[href*="bbs=1020"]')
 ruliweb.com,ppomppu.co.kr,daum.net,naver.com##[id$='_ad']
 search.danawa.com###dimLayer
@@ -214,15 +218,15 @@ sports.chosun.com##div[class$='-ad']
 sptv*.com,sptv24.com##div.modal_wrap
 startpage.com##.serp-toast-container:has-text(tracking)
 svc.soldout.co.kr##.on-fixed-tab.tab-nav-wrap.divide-border-top-10:style(position:static!important;)
+teamblind.com##.is_mobile.hire-banner
 teamblind.com##.tag-actions
 tilnote.io##.justify-between.items-center.flex.container-medium
-torrentbot*.com,torrentbot162.com##.grid
 toptoon.com##.isbn_num_area
+torrentbot*.com,torrentbot162.com##.grid
 tribuna.com##[class^='BannerAlternative_banner__']
 tribuna.com##[class^='Main_main-layout__dugout__']
 tribuna.com##[class^='Main_main-layout__fixed-banners__']
 tribuna.com##[id*='ScriptRoot']
-unsafelink.com#%#window.addEventListener('load',function(){document.getElementById('without-next-ask').click();document.querySelector('.content__goto-link.btn').click();});
 uptodown.com###uptodown-turbo-promo
 uptodown.com##div.ad
 urbandictionary.com##div.ad-panel
@@ -231,8 +235,9 @@ webtool.cusis.net#@#[class*='upport']:has-text(/구독|후원|기부/)
 yna.co.kr#%#//scriptlet('prevent-fetch', 'scr.nsmartad.com')
 zdnet.co.kr##.top_line
 zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.5em !important; }
-||adcr.naver.com^$all
+||ad-creative.pstatic.net^
 ||ad.danawa.com/RealMedia/ads/adstream_lx.ads/
+||adcr.naver.com^$all
 ||analytics-*.i-nahee.com^
 ||ceoscoredaily.com/api.php$document,xhr
 ||govkorea24.com^
@@ -242,11 +247,17 @@ zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.
 ||my.musinsa.com/api/member/v1/login-status$xhr
 ||namu.wiki/sidebar.json$domain=namu.wiki
 ||naver.com/jackpotlog/*/logs$xhr
+||ni.naver.com^
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,domain=battlecats-db.com
+||scv-*.io.naver.com^
+||scv.band.us/jackpotlog/*/logs
+||sdk.pushmessage.samsung.com/v3/applications/*/clients/
 ||sentry-apollo-fe.naver.com^
 ||setting-logncrash.cloud.toast.com^
+||ssio*.nchat.naver.com^
 ||xn--$doc,frame,badfilter
 ! Enable copy but hide menu www.joara.com##.viewScroll-Center
+!
 !
 !! Userscript Modules
 !
@@ -260,12 +271,17 @@ zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.
 ! m.blog.naver.com,m.cafe.naver.com,arca.live#%#(function(){'use strict';var erudaLoaded=false,erudaScript=null;function loadEruda(){if(!erudaLoaded){erudaScript=document.createElement('script');erudaScript.src="//cdn.jsdelivr.net/npm/eruda";document.body.appendChild(erudaScript);erudaScript.onload=function(){eruda.init();eruda.show();erudaLoaded=true;localStorage.setItem('erudaLoaded','true');};}}function unloadEruda(){if(erudaLoaded){eruda.destroy();document.body.removeChild(erudaScript);erudaScript=null;erudaLoaded=false;localStorage.setItem('erudaLoaded','false');}}var touchTimeout;document.addEventListener('touchstart',function(e){if(e.touches.length===2){touchTimeout=setTimeout(function(){erudaLoaded?unloadEruda():loadEruda();},2000);}});document.addEventListener('touchend',function(){if(touchTimeout){clearTimeout(touchTimeout);}});document.addEventListener('keydown',function(e){if(e.ctrlKey&&e.shiftKey&&e.key==='R'){erudaLoaded?unloadEruda():loadEruda();}});if(localStorage.getItem('erudaLoaded')==='true'){loadEruda();}})();
 ! Novelpia Remote Control
 novelpia.com#%#(function(){'use strict';document.addEventListener('keydown',function(event){if(event.keyCode==37){var prevButton=document.querySelector('span.footer_btn:nth-of-type(1)');if(prevButton){prevButton.click();}}else if(event.keyCode==39){var nextButton=document.querySelector('div.menu-next-item');if(nextButton){nextButton.click();}}});})();
+! Prevent 11st.co.kr links from switching to apps
+fmkorea.com,eomisae.co.kr,arca.live,ruliweb.com,clien.net,damoang.net,coolenjoy.net,quasarzone.com#%#document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('a').forEach(l=>{let u=l.getAttribute('href');u&&u.includes('11st.co.kr')&&(u=u.split('/share')[0])!==l.getAttribute('href')&&l.setAttribute('href',u);});});
 ! Remove text formatting when copying
 #%#document.addEventListener('copy',e=>{e.preventDefault();e.clipboardData.setData('text/plain',window.getSelection().toString().replace(/<[^>]*>/g,'').replace(/[^\S\n]+/g,' ').split('\n').map(l=>l.trim()).join('\n').replace(/\n{3,}/g,'\n\n'));});
 ! Telegra.ph warp to destination link
 telegra.ph#%#document.addEventListener('DOMContentLoaded', function(){const editors=document.querySelectorAll('.ql-editor');const links=[];editors.forEach(editor=>{const anchorTags=editor.querySelectorAll('a[href]');if(anchorTags.length===1&&!editor.querySelector('img[src]')){links.push(anchorTags[0].href);}});if(links.length===1){window.location.href=links[0];}});
 ! Toggle Fullscreen Button For Mobile Browsers
 blog.naver.com,cafe.naver.com,arca.live,comic.naver.com,lezhin.com,toomics.com,toptoon.com,webtoon.kakao.com,page.kakao.com,series.naver.com,toptoon.com,toomics.com#%#(function(){function t(){document.fullscreenElement||document.mozFullScreenElement||document.webkitFullscreenElement?document.cancelFullScreen?document.cancelFullScreen():document.mozCancelFullScreen?document.mozCancelFullScreen():document.webkitCancelFullScreen&&document.webkitCancelFullScreen():document.documentElement.requestFullscreen?document.documentElement.requestFullscreen():document.documentElement.mozRequestFullScreen?document.documentElement.mozRequestFullScreen():document.documentElement.webkitRequestFullscreen&&document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);this.parentNode.style.display='none'}window.addEventListener('dblclick',function(e){var n=document.createElement('div'),l=document.createElement('button');n.style.cssText='position:fixed;opacity:0;z-index:999999;left:'+(e.clientX-20)+'px;top:'+(e.clientY-10)+'px',l.innerHTML='Fullscreen',l.addEventListener('click',t),n.appendChild(l),document.body.appendChild(n)})})();
+! Unsafelink.com warp to destination link
+unsafelink.com#%#window.addEventListener('load',function(){document.getElementById('without-next-ask').click();document.querySelector('.content__goto-link.btn').click();});
+!
 ! Scripts of Adguard Tracking Protection & Widget Filter
 #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
@@ -289,6 +305,7 @@ blog.naver.com,cafe.naver.com,arca.live,comic.naver.com,lezhin.com,toomics.com,t
 #%#var AG_abortOnPropertyRead=function(a,b){var c=Math.random().toString(36).substr(2,8);AG_defineProperty(a,{beforeGet:function(){b&&console.warn("AdGuard aborted property read: "+a);throw new ReferenceError(c);}});var d=window.onerror;window.onerror=function(e){if("string"===typeof e&&-1!==e.indexOf(c))return b&&console.warn("AdGuard has caught window.onerror: "+a),!0;if(d instanceof Function)return d.apply(this,arguments)}};
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_setConstant=function(e,a){if("undefined"===a)a=void 0;else if("false"===a)a=!1;else if("true"===a)a=!0;else if("noopFunc"===a)a=function(){};else if("trueFunc"===a)a=function(){return!0};else if("falseFunc"===a)a=function(){return!1};else if(/^\d+$/.test(a)){if(a=parseFloat(a),isNaN(a)||32767<Math.abs(a))return}else return;var b=!1;AG_defineProperty(e,{get:function(){return a},set:function(c){if(b)var d=!0;else void 0!==c&&void 0!==a&&typeof c!==typeof a&&(b=!0),d=b;d&&(a=c)}})};
+!
 !
 ! perforation line_1
 !
