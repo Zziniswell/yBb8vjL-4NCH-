@@ -1,5 +1,5 @@
 ! Title: mylist
-! Version: 1.269x
+! Version: 1.269y
 ! Description: my adblock rules
 
 
@@ -66,10 +66,6 @@ businesspost.co.kr##.sideNav
 clien.net#%#//scriptlet('href-sanitizer', 'a[href^="https://link.coupang.com/"]')
 clien.net#%#//scriptlet('href-sanitizer', 'a[href^="https://s.click.aliexpress.com/"]')
 coolenjoy.net#%#//scriptlet('href-sanitizer', 'a[href^="https://coolenjoy.net/bbs/link2.php?"]')
-coupang.com###prod-detail-recommend
-coupang.com###promotionCarousel
-coupang.com###scItemList
-coupang.com##.people-also-bought
 dailypharm.com###todayFocusSlider
 dailypharm.com##.N_sectionMenu:style(position:static!important;)
 dailypharm.com##.TopNav.top:style(position:static!important;)
@@ -132,7 +128,7 @@ kin.naver.com###eventPopupLayerNJob
 kin.naver.com##.expertRecommend
 klauncher.kr#%#//scriptlet('set-constant', '_0x3aa5', 'noopFunc')
 kmib.co.kr,ajunews.com,dongascience.com,sports.chosun.com##[id^='ad']
-kormedi.com,webtool.cusis.net#@#[class*='ubscri']:has-text(/구독|후원|기부/)
+kormedi.com#@#[class*='ubscri']:has-text(/구독|후원|기부/)
 lawissue.co.kr##.wrap > *:not([class]):not(div:nth-of-type(4))
 lawtimes.co.kr###__next > div > div:first-child:has(svg)
 lezhin.com##.cutLicense.cut
@@ -247,6 +243,11 @@ uptodown.com###uptodown-turbo-promo
 uptodown.com##div.ad
 urbandictionary.com##div.ad-panel
 vivaldi.net#@#.btn-top
+webtool.cusis.net#@#[class*='upport']:has-text(/구독|후원|기부/)
+www.coupang.com###prod-detail-recommend
+www.coupang.com###promotionCarousel
+www.coupang.com###scItemList
+www.coupang.com##.people-also-bought
 yna.co.kr#%#//scriptlet('prevent-fetch', 'scr.nsmartad.com')
 zdnet.co.kr##.top_line
 zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.5em !important; }
