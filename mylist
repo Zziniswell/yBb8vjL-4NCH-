@@ -1,5 +1,5 @@
 ! Title: mylist
-! Version: 1.269
+! Version: 1.269x
 ! Description: my adblock rules
 
 
@@ -53,6 +53,7 @@ a-ha.io##.ptr__children > div > div > [src]:upward(2)
 aagag.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 aagag.com#@#ins.adsbygoogle[data-ad-slot]
 adguard.com##.flash-wrapper-wrap
+arca.live##[href^="https://wall.smaad.net/wall/"]
 arca.live#%#function updateExternalLinks(){document.querySelectorAll('a.external').forEach(function(a){var h=a.href;if(h.startsWith('https://unsafelink.com/')){a.href=h.replace('https://unsafelink.com/','').replace(/^http:\/\//,'https://')}})}window.addEventListener('load',updateExternalLinks);window.addEventListener('hashchange',updateExternalLinks);
 arca.live#%#window.addEventListener('load',function(){document.querySelectorAll('a.external').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();window.location.href=this.href})});var removeModal=function(){var m=document.querySelector('.microModal');m&&m.parentNode.removeChild(m)};removeModal();new MutationObserver(function(mutations){mutations.forEach(function(){removeModal()})}).observe(document.body,{childList:true,subtree:true})});
 auction.co.kr##.component--sponsor_link.component
@@ -65,6 +66,10 @@ businesspost.co.kr##.sideNav
 clien.net#%#//scriptlet('href-sanitizer', 'a[href^="https://link.coupang.com/"]')
 clien.net#%#//scriptlet('href-sanitizer', 'a[href^="https://s.click.aliexpress.com/"]')
 coolenjoy.net#%#//scriptlet('href-sanitizer', 'a[href^="https://coolenjoy.net/bbs/link2.php?"]')
+coupang.com###prod-detail-recommend
+coupang.com###promotionCarousel
+coupang.com###scItemList
+coupang.com##.people-also-bought
 dailypharm.com###todayFocusSlider
 dailypharm.com##.N_sectionMenu:style(position:static!important;)
 dailypharm.com##.TopNav.top:style(position:static!important;)
@@ -127,7 +132,7 @@ kin.naver.com###eventPopupLayerNJob
 kin.naver.com##.expertRecommend
 klauncher.kr#%#//scriptlet('set-constant', '_0x3aa5', 'noopFunc')
 kmib.co.kr,ajunews.com,dongascience.com,sports.chosun.com##[id^='ad']
-kormedi.com#@#[class*='ubscri']:has-text(/구독|후원|기부/)
+kormedi.com,webtool.cusis.net#@#[class*='ubscri']:has-text(/구독|후원|기부/)
 lawissue.co.kr##.wrap > *:not([class]):not(div:nth-of-type(4))
 lawtimes.co.kr###__next > div > div:first-child:has(svg)
 lezhin.com##.cutLicense.cut
@@ -136,6 +141,14 @@ m.betanews.net##div#adshow
 m.blog.naver.com###blog_fe_feed > div:has-text(/다른 글|디깅하기|주제 더보기/)
 m.cafe.daum.net##li.nativead-placeholder
 m.cafe.naver.com##.FloatingJoinButton.DefaultButton
+m.coupang.com###MWEB_PRODUCT_DETAIL_ALSO_BOUGHT
+m.coupang.com###MWEB_PRODUCT_DETAIL_ALSO_VIEWS
+m.coupang.com###MWEB_PRODUCT_DETAIL_CMG_BOTTOM_BANNER
+m.coupang.com###MWEB_PRODUCT_DETAIL_ITEM_MID_BANNER
+m.coupang.com###MWEB_PRODUCT_DETAIL_ITEM_MID_CAROUSEL1
+m.coupang.com###MWEB_PRODUCT_DETAIL_LEGACY_INTRO_BANNER_FULL
+m.coupang.com###MWEB_PRODUCT_DETAIL_PROMOTION_CAROUSEL
+m.coupang.com###MWEB_PRODUCT_DETAIL_SPLASH_BOTTOM_SHEET
 m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|yna.co.kr|kmib.co.kr|거부함|거부자|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새|민주노총|찢갈이|goo.su/)
 m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('<br>')[0].trim();link.setAttribute('href',url);});});
 m.dongascience.com###letter_apply
@@ -143,6 +156,9 @@ m.dongascience.com###view_tag_news > .wrap
 m.dongascience.com##.tag
 m.inven.co.kr###invenAppSuggestion
 m.newskorea21.com###tree_line_1
+m.lotteimall.com###appdownPopTop
+m.lotteimall.com##.pd_recom
+m.shop.interpark.com##.usersViewedProducts
 m.sportalkorea.com###cot_tl_fixed1
 manatoki*.net###id_mbv
 maxmovie.com#%#//scriptlet('prevent-xhr', 'mtag.mman.kr')
@@ -231,7 +247,6 @@ uptodown.com###uptodown-turbo-promo
 uptodown.com##div.ad
 urbandictionary.com##div.ad-panel
 vivaldi.net#@#.btn-top
-webtool.cusis.net#@#[class*='upport']:has-text(/구독|후원|기부/)
 yna.co.kr#%#//scriptlet('prevent-fetch', 'scr.nsmartad.com')
 zdnet.co.kr##.top_line
 zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.5em !important; }
@@ -572,10 +587,6 @@ contents.premium.naver.com###_MP_LAYER > .bottom_layer_wrap
 cookmana*.com##.m-advert-wrap.wrap
 coolenjoy.net###bo_list > .d-sm-none.d-block
 coolenjoy.net##.carousel-inner
-coupang.com###MWEB_PRODUCT_DETAIL_ITEM_MID_BANNER
-coupang.com###MWEB_PRODUCT_DETAIL_LEGACY_INTRO_BANNER_FULL
-coupang.com###MWEB_PRODUCT_DETAIL_PROMOTION_CAROUSEL
-coupang.com###MWEB_PRODUCT_DETAIL_SPLASH_BOTTOM_SHEET
 coupang.com###bottom-sheet-nudge
 croket.co.kr##.detail_banner
 croket.co.kr##.popup-full
@@ -885,6 +896,9 @@ m.gamemeca.com###container > div:nth-of-type(4)
 m.ggumim.co.kr##[class*='Button']:has-text(광고)
 m.ggumim.co.kr##[class*='Header__BannerContainer']
 m.mbn.co.kr###div_mpip
+m.naver.com###MM_SEARCH_SHOP_LIVE
+m.naver.com###MM_search_container
+m.naver.com###_LEVERAGE_PROMOTION
 m.ppomppu.co.kr##ul.bbsList_new:nth-of-type(3) > li.new_sk.bbs_list_thumbnail.none-border:nth-of-type(2):has(.mark)
 m.shop.interpark.com#@$#.topBannerWrapper * { height: 1px !important; }
 m.skstoa.com##[id^='popup']
@@ -958,9 +972,6 @@ namu.wiki,~en.namu.wiki,~board.namu.wiki##div[class]:has(svg > path):has(ul):has
 nate.com##.shopBox
 nationalgeographic.com##[class$='__AdWrap']
 nationalgeographic.com##div.natgeo-ad
-naver.com###MM_SEARCH_SHOP_LIVE
-naver.com###MM_search_container
-naver.com###_LEVERAGE_PROMOTION
 naver.com##.additional_area
 naver.com##.footer_banner
 naver.com##[class*='appShortcut']
@@ -1149,11 +1160,10 @@ spankbang.com##span.video-inline-ads
 sportbible.com##[class^='article-observer_bottomAd__']
 sportbible.com##div[class^='advert-placeholder_advertPlaceholder____']
 ssfshop.com##.act-diver
-ssg.com###_detailgoods
-ssg.com###_endlessgoods
+ssg.com###_detailgoods:remove()
+ssg.com###_endlessgoods:remove()
 ssg.com###item_advert_cpc_div
 ssg.com##.mndtl_event_img
-ssg.com##.mndtl_sec_bx
 ssg.com##[id^='m_header_']
 ssg.com##div > div > div:has-text(/앱다운받기|지금 시작하기/)
 ssg.com##div.mndtl_sec_cont > div.mndtl_sec_bx > div.mndtl_bn
