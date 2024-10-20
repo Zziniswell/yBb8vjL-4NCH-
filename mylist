@@ -1,9 +1,8 @@
 ! Title: mylist
-! Version: 1.268
+! Version: 1.269
 ! Description: my adblock rules
 
 
-! for only window @@$stealth=useragent,domain=hasha.in
 ###id_mbv
 ###main-banner-view > div:first-child
 ##.alert_windows
@@ -87,7 +86,6 @@ display.cjonstyle.com###wrap > .goto_app_layer_popup
 dmitory.com##[class^='google_']
 donga.com###app_msg
 duckduckgo.com##.footer > div:nth-of-type(1)
-eomisae.co.kr#%#//scriptlet('href-sanitizer', 'a[href*="11st.co.kr"]')
 forbes.com##[id^='-ad-']
 game.naver.com##[class^='naverAlarm_popupNaverAlarm__']
 ggul.zal.kr#%#window.onload=function(){(function(){"use strict";const v=document.getElementById("bo_v_atc")||document.getElementById("inner-content-body");if(v){v.classList.remove("omit_wrap","hided");v.style.maxHeight="unset";}})();};
@@ -103,6 +101,7 @@ google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(.i
 google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(/edu.pl|pila.pl/):has(svg)
 google.*,google.com,google.co.kr##[id^='arc-srp'] > div > div[class]:has-text(/€|₩|co.za/):has-text(.0):has(svg)
 hasha.in###root > div[class]
+hogangnono.com#@#[class*='app-banner']
 humors.zigcou.com###zigcou_99_Minarticletop_300_250
 humors.zigcou.com##[src^="https://img.coucounews.com/"]
 ign.com###zdcFloatingBtn
@@ -126,7 +125,6 @@ joara.com##.react-modal-sheet-backdrop
 jtbc.co.kr,dailypharm.com##[id$='AD']
 kin.naver.com###eventPopupLayerNJob
 kin.naver.com##.expertRecommend
-kiosk.ac###welcome-dialog:remove()
 klauncher.kr#%#//scriptlet('set-constant', '_0x3aa5', 'noopFunc')
 kmib.co.kr,ajunews.com,dongascience.com,sports.chosun.com##[id^='ad']
 kormedi.com#@#[class*='ubscri']:has-text(/구독|후원|기부/)
@@ -138,7 +136,7 @@ m.betanews.net##div#adshow
 m.blog.naver.com###blog_fe_feed > div:has-text(/다른 글|디깅하기|주제 더보기/)
 m.cafe.daum.net##li.nativead-placeholder
 m.cafe.naver.com##.FloatingJoinButton.DefaultButton
-m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|yna.co.kr|kmib.co.kr|거부함|거부자|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새/)
+m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|yna.co.kr|kmib.co.kr|거부함|거부자|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새|민주노총|찢갈이|goo.su/)
 m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('<br>')[0].trim();link.setAttribute('href',url);});});
 m.dongascience.com###letter_apply
 m.dongascience.com###view_tag_news > .wrap
@@ -217,9 +215,11 @@ sports.chosun.com##.g-0.row > div:last-child
 sports.chosun.com##div[class$='-ad']
 sptv*.com,sptv24.com##div.modal_wrap
 startpage.com##.serp-toast-container:has-text(tracking)
+svc.soldout.co.kr##.blur-effect:style(filter:none!important;)
 svc.soldout.co.kr##.on-fixed-tab.tab-nav-wrap.divide-border-top-10:style(position:static!important;)
 teamblind.com##.is_mobile.hire-banner
 teamblind.com##.tag-actions
+techpress.co.kr##.custom-se-image-video-resource._gifmp4
 tilnote.io##.justify-between.items-center.flex.container-medium
 toptoon.com##.isbn_num_area
 torrentbot*.com,torrentbot162.com##.grid
@@ -257,6 +257,7 @@ zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.
 ||ssio*.nchat.naver.com^
 ||xn--$doc,frame,badfilter
 ! Enable copy but hide menu www.joara.com##.viewScroll-Center
+! for only window @@$stealth=useragent,domain=hasha.in
 !
 !
 !! Userscript Modules
