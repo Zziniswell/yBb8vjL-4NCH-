@@ -1,5 +1,5 @@
 ! Title: mylist
-! Version: 1.269y
+! Version: 1.270
 ! Description: my adblock rules
 
 
@@ -8,8 +8,11 @@
 ##.alert_windows
 ##.clearfix > li:has(> *:has-text(보증토토))
 ##.goBack
+##.goTop
 ##.m-advert-wrap.wrap
 ##.moveTop
+##[class$='btn-top']
+##[class$='btn_top']
 ##[class*='ubscri']:has-text(/구독|후원|기부/)
 ##[class*='upport']:has-text(/구독|후원|기부/)
 ##[href*="/v.daum.net/channel/"]
@@ -29,6 +32,7 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@$extension="隱藏網頁要求通知權限",domain=dcinside.com
 @@$extension="웹 사이트에서 이미지 해상도 오버레이 표시",domain=comic.naver.com|lezhin.com|toomics.com|toptoon.com|webtoon.kakao.com|page.kakao.com|series.naver.com|toptoon.com|toomics.com|babechat.ai
 @@$popup,domain=arca.live
+@@$stealth=1p-cookie,domain=naver.com|github.com|google.com
 @@$stealth=useragent,app=org.mozilla.firefox
 @@.kr^$extension="Immersive Translate - Translate Web & PDF"
 @@korea$extension="Immersive Translate - Translate Web & PDF"
@@ -53,9 +57,11 @@ a-ha.io##.ptr__children > div > div > [src]:upward(2)
 aagag.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 aagag.com#@#ins.adsbygoogle[data-ad-slot]
 adguard.com##.flash-wrapper-wrap
+aladin.co.kr###w_t_event
 arca.live##[href^="https://wall.smaad.net/wall/"]
 arca.live#%#function updateExternalLinks(){document.querySelectorAll('a.external').forEach(function(a){var h=a.href;if(h.startsWith('https://unsafelink.com/')){a.href=h.replace('https://unsafelink.com/','').replace(/^http:\/\//,'https://')}})}window.addEventListener('load',updateExternalLinks);window.addEventListener('hashchange',updateExternalLinks);
 arca.live#%#window.addEventListener('load',function(){document.querySelectorAll('a.external').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();window.location.href=this.href})});var removeModal=function(){var m=document.querySelector('.microModal');m&&m.parentNode.removeChild(m)};removeModal();new MutationObserver(function(mutations){mutations.forEach(function(){removeModal()})}).observe(document.body,{childList:true,subtree:true})});
+akomnews.com##.m_banner01
 auction.co.kr##.component--sponsor_link.component
 auction.co.kr##.vip-togetheritems
 betanews.net###csource
@@ -135,8 +141,11 @@ lezhin.com##.cutLicense.cut
 lotteon.com##.recommendInfinitiWrap
 m.betanews.net##div#adshow
 m.blog.naver.com###blog_fe_feed > div:has-text(/다른 글|디깅하기|주제 더보기/)
+m.cafe.naver.com##div.item_wrap:has([style*='/1_150.svg']):has-text(/제휴|매입|삽니다|최고가/):style(opacity:0!important; pointer-events:none!important;)
 m.cafe.daum.net##li.nativead-placeholder
+m.cafe.naver.com##.CafeMain:has(.cafe_name:has-text(중고나라)) li:has([style*='/1_150.svg'])
 m.cafe.naver.com##.FloatingJoinButton.DefaultButton
+m.comic.naver.com##.type_seemore.ly_everyday
 m.coupang.com###MWEB_PRODUCT_DETAIL_ALSO_BOUGHT
 m.coupang.com###MWEB_PRODUCT_DETAIL_ALSO_VIEWS
 m.coupang.com###MWEB_PRODUCT_DETAIL_CMG_BOTTOM_BANNER
@@ -145,7 +154,7 @@ m.coupang.com###MWEB_PRODUCT_DETAIL_ITEM_MID_CAROUSEL1
 m.coupang.com###MWEB_PRODUCT_DETAIL_LEGACY_INTRO_BANNER_FULL
 m.coupang.com###MWEB_PRODUCT_DETAIL_PROMOTION_CAROUSEL
 m.coupang.com###MWEB_PRODUCT_DETAIL_SPLASH_BOTTOM_SHEET
-m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|yna.co.kr|kmib.co.kr|거부함|거부자|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새|민주노총|찢갈이|goo.su/)
+m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|yna.co.kr|kmib.co.kr|거부함|거부자|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새|민주노총|찢갈이|goo.su|tok/)
 m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('<br>')[0].trim();link.setAttribute('href',url);});});
 m.dongascience.com###letter_apply
 m.dongascience.com###view_tag_news > .wrap
@@ -154,7 +163,6 @@ m.inven.co.kr###invenAppSuggestion
 m.newskorea21.com###tree_line_1
 m.lotteimall.com###appdownPopTop
 m.lotteimall.com##.pd_recom
-m.shop.interpark.com##.usersViewedProducts
 m.sportalkorea.com###cot_tl_fixed1
 manatoki*.net###id_mbv
 maxmovie.com#%#//scriptlet('prevent-xhr', 'mtag.mman.kr')
@@ -168,6 +176,9 @@ moeni.net##.bi-telegram.bi:upward(3)
 moeni.net##.show.modal.fade
 msn.com##end-of-content-block
 muko.kr##.xe-widget-wrapper > div:has([src$='.jpg']):has([href^='/ad'])
+musinsa.com##.gtm-impression-content:has-text(연관 콘텐츠)
+musinsa.com##.gtm-impression-popup
+musinsa.com###commonLayoutContainer:style(padding-top:0px!important;)
 mybox.naver.com###guide_banner
 namu.wiki#@#div:not([class*=" "]) ~ div div + div[class]:has(> div[id][class]):not(:has(div[class*=" "] > span))
 namu.wiki,~en.namu.wiki,~board.namu.wiki##[class]:empty:only-child:not(div):not([src]):not([href]):upward(4):has([href*='/w/']):not(*:has(input))
@@ -199,11 +210,10 @@ politico.eu##[class^='ad_']
 pping.kr##.swiper-slide-active.swiper-slide > div:first-child
 ppomppu.co.kr##li:has(.type3.board_notice)
 quora.com###root > .q-box > .q-box > div.q-box > div:has-text(Sign Up to learn more)
-reddit.*##[bundlename="nsfw_blocking_modal"]:remove()
-reddit.*##body:has(> shreddit-app > shreddit-async-loader[bundlename="app_selector"]):style(overflow: auto !important; pointer-events: auto !important;)
-reddit.*##xpromo-untagged-content-blocking-modal:remove()
 reddit.com###main-content > .absolute
-reddit.com##shreddit-async-loader[bundlename="app_selector"]
+reddit.com##.thumbnail-blur:style(filter:none!important;)
+reddit.com##shreddit-async-loader.theme-beta:remove()
+reddit.com##xpromo-untagged-content-blocking-modal:remove()
 reuters.com##[class*='site-header__inner-sticky__']:style(position:static!important;)
 reuters.com##[class^='refinitiv-promo-bar__container__']
 ruliweb.com#%#//scriptlet('href-sanitizer', 'a[href*="bbs=1020"]')
@@ -248,6 +258,7 @@ www.coupang.com###prod-detail-recommend
 www.coupang.com###promotionCarousel
 www.coupang.com###scItemList
 www.coupang.com##.people-also-bought
+yes24.com###upperBnWrap
 yna.co.kr#%#//scriptlet('prevent-fetch', 'scr.nsmartad.com')
 zdnet.co.kr##.top_line
 zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.5em !important; }
@@ -261,7 +272,6 @@ zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.
 ||js.monitor.azure.com^
 ||kimppan.com/api/user/CreateVisitLog
 ||my.musinsa.com/api/member/v1/login-status$xhr
-||namu.wiki/sidebar.json$domain=namu.wiki
 ||naver.com/jackpotlog/*/logs$xhr
 ||ni.naver.com^
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,domain=battlecats-db.com
@@ -285,8 +295,8 @@ zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.
 ! F11 for Fullscreen
 #%#(function(){'use strict';document.addEventListener("keydown",function(e){(e.which||e.keyCode)==122&&document.fullscreenEnabled&&(document.fullscreenElement?document.exitFullscreen&&document.exitFullscreen():document.documentElement.requestFullscreen())})})();
 ! Inject Eruda dev tool
-! m.blog.naver.com,m.cafe.naver.com,arca.live#%#(function(){'use strict';var erudaLoaded=false,erudaScript=null;function loadEruda(){if(!erudaLoaded){erudaScript=document.createElement('script');erudaScript.src="//cdn.jsdelivr.net/npm/eruda";document.body.appendChild(erudaScript);erudaScript.onload=function(){eruda.init();eruda.show();erudaLoaded=true;localStorage.setItem('erudaLoaded','true');};}}function unloadEruda(){if(erudaLoaded){eruda.destroy();document.body.removeChild(erudaScript);erudaScript=null;erudaLoaded=false;localStorage.setItem('erudaLoaded','false');}}var touchTimeout;document.addEventListener('touchstart',function(e){if(e.touches.length===2){touchTimeout=setTimeout(function(){erudaLoaded?unloadEruda():loadEruda();},2000);}});document.addEventListener('touchend',function(){if(touchTimeout){clearTimeout(touchTimeout);}});document.addEventListener('keydown',function(e){if(e.ctrlKey&&e.shiftKey&&e.key==='R'){erudaLoaded?unloadEruda():loadEruda();}});if(localStorage.getItem('erudaLoaded')==='true'){loadEruda();}})();
-! Novelpia Remote Control
+! arca.live,blog.naver.com,cafe.naver.com#%#(function(){'use strict';var erudaLoaded=false,erudaScript=null;function loadEruda(){if(!erudaLoaded){erudaScript=document.createElement('script');erudaScript.src="//cdn.jsdelivr.net/npm/eruda";document.body.appendChild(erudaScript);erudaScript.onload=function(){eruda.init();eruda.show();erudaLoaded=true;localStorage.setItem('erudaLoaded','true');};}}function unloadEruda(){if(erudaLoaded){eruda.destroy();document.body.removeChild(erudaScript);erudaScript=null;erudaLoaded=false;localStorage.setItem('erudaLoaded','false');}}var touchTimeout;document.addEventListener('touchstart',function(e){if(e.touches.length===2){touchTimeout=setTimeout(function(){erudaLoaded?unloadEruda():loadEruda();},2000);}});document.addEventListener('touchend',function(){if(touchTimeout){clearTimeout(touchTimeout);}});document.addEventListener('keydown',function(e){if(e.ctrlKey&&e.shiftKey&&e.key==='R'){erudaLoaded?unloadEruda():loadEruda();}});if(localStorage.getItem('erudaLoaded')==='true'){loadEruda();}})();
+! Novelpia Arrow key Pager
 novelpia.com#%#(function(){'use strict';document.addEventListener('keydown',function(event){if(event.keyCode==37){var prevButton=document.querySelector('span.footer_btn:nth-of-type(1)');if(prevButton){prevButton.click();}}else if(event.keyCode==39){var nextButton=document.querySelector('div.menu-next-item');if(nextButton){nextButton.click();}}});})();
 ! Prevent 11st.co.kr links from switching to apps
 fmkorea.com,eomisae.co.kr,arca.live,ruliweb.com,clien.net,damoang.net,coolenjoy.net,quasarzone.com#%#document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('a').forEach(l=>{let u=l.getAttribute('href');u&&u.includes('11st.co.kr')&&(u=u.split('/share')[0])!==l.getAttribute('href')&&l.setAttribute('href',u);});});
@@ -295,7 +305,7 @@ fmkorea.com,eomisae.co.kr,arca.live,ruliweb.com,clien.net,damoang.net,coolenjoy.
 ! Telegra.ph warp to destination link
 telegra.ph#%#document.addEventListener('DOMContentLoaded', function(){const editors=document.querySelectorAll('.ql-editor');const links=[];editors.forEach(editor=>{const anchorTags=editor.querySelectorAll('a[href]');if(anchorTags.length===1&&!editor.querySelector('img[src]')){links.push(anchorTags[0].href);}});if(links.length===1){window.location.href=links[0];}});
 ! Toggle Fullscreen Button For Mobile Browsers
-blog.naver.com,cafe.naver.com,arca.live,comic.naver.com,lezhin.com,toomics.com,toptoon.com,webtoon.kakao.com,page.kakao.com,series.naver.com,toptoon.com,toomics.com#%#(function(){function t(){document.fullscreenElement||document.mozFullScreenElement||document.webkitFullscreenElement?document.cancelFullScreen?document.cancelFullScreen():document.mozCancelFullScreen?document.mozCancelFullScreen():document.webkitCancelFullScreen&&document.webkitCancelFullScreen():document.documentElement.requestFullscreen?document.documentElement.requestFullscreen():document.documentElement.mozRequestFullScreen?document.documentElement.mozRequestFullScreen():document.documentElement.webkitRequestFullscreen&&document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);this.parentNode.style.display='none'}window.addEventListener('dblclick',function(e){var n=document.createElement('div'),l=document.createElement('button');n.style.cssText='position:fixed;opacity:0;z-index:999999;left:'+(e.clientX-20)+'px;top:'+(e.clientY-10)+'px',l.innerHTML='Fullscreen',l.addEventListener('click',t),n.appendChild(l),document.body.appendChild(n)})})();
+blog.naver.com,arca.live,comic.naver.com,lezhin.com,toomics.com,toptoon.com,webtoon.kakao.com,page.kakao.com,series.naver.com,toptoon.com,toomics.com#%#(function(){function t(){document.fullscreenElement||document.mozFullScreenElement||document.webkitFullscreenElement?document.cancelFullScreen?document.cancelFullScreen():document.mozCancelFullScreen?document.mozCancelFullScreen():document.webkitCancelFullScreen&&document.webkitCancelFullScreen():document.documentElement.requestFullscreen?document.documentElement.requestFullscreen():document.documentElement.mozRequestFullScreen?document.documentElement.mozRequestFullScreen():document.documentElement.webkitRequestFullscreen&&document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);this.parentNode.style.display='none'}window.addEventListener('dblclick',function(e){var n=document.createElement('div'),l=document.createElement('button');n.style.cssText='position:fixed;opacity:0;z-index:999999;left:'+(e.clientX-20)+'px;top:'+(e.clientY-10)+'px',l.innerHTML='Fullscreen',l.addEventListener('click',t),n.appendChild(l),document.body.appendChild(n)})})();
 ! Unsafelink.com warp to destination link
 unsafelink.com#%#window.addEventListener('load',function(){document.getElementById('without-next-ask').click();document.querySelector('.content__goto-link.btn').click();});
 !
@@ -330,7 +340,7 @@ unsafelink.com#%#window.addEventListener('load',function(){document.getElementBy
 ! for only android @@$stealth=useragent,domain=www.youtube.com
 ! for only android @@||google.*/search$stealth=useragent
 ! @@$stealth=ip,domain=123123play.com|damoang.net|fortnite.com|innisfree.com|mania.kr|arca.live|bitwarden.com|amoremall.com|unrealengine.com
-! @@$stealth=ip,domain=dasibogo.net|mrjav.net|dprime.kr|halfclub.com|twinmotion.com|whooing.com|vivaldi.net|bloomberg.org
+! @@$stealth=ip,domain=dasibogo.net|dprime.kr|halfclub.com|twinmotion.com|whooing.com|vivaldi.net|bloomberg.org
 ! @@$stealth=ip,domain=getunicorn.app|hasha.in|dcinside.com|epicgames.com|missav.com|suto.co.kr|kbcard.com|ssg.com
 ! @@$stealth=ip,domain=kbs.co.kr|sbs.co.kr
 ###backToTop
@@ -432,7 +442,7 @@ $removeparam=t,domain=duckduckgo.com
 @@$removeparam,domain=smartstore.naver.com|brand.naver.com
 @@$stealth,domain=ofw.adison.co|abr.ge|airbridge.io
 @@$stealth=dpi,domain=app.link|startpage.com|kurly.com|nid.naver.com|ses.signgate.com|onelink.me|login.coupang.com
-@@$stealth=ip,domain=novelpia.com|kissjav.com|claude.ai|img.pay.naver.net|login.vivaldi.net
+@@$stealth=ip,domain=novelpia.com|kissjav.com|claude.ai|img.pay.naver.net|login.vivaldi.net|mrjav.net
 @@$stealth=useragent,domain=chromewebstore.google.com|microsoftedge.microsoft.com|addons.mozilla.org|store.whale.naver.com|galaxystore.samsung.com
 @@$stealth=useragent,domain=video.fc2.com|kbcard.com|gmarket.co.kr|auction.co.kr|app.link|kbanknow.com|claude.ai|on.lotteon.com
 @@$stealth=webrtc,domain=moeni.net
@@ -463,7 +473,7 @@ $removeparam=t,domain=duckduckgo.com
 @@||img.hellocdn*.net^$stealth=referrer
 @@||ourhome.co.kr^$stealth=dpi
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=apkmirror.com|devliberty.blogspot.com
-@@||reddit.com^$removeparam=rdt,app=com.mycompany.app.soulbrowser
+@@||reddit.com^$removeparam=rdt
 @@||scr.nsmartad.com/admixer/$script,domain=yna.co.kr
 @@||sdk.privacy-center.org^$domain=france24.com
 @@||smartmediarep.com^$media,domain=donga.com|~mlbpark.donga.com
@@ -1079,8 +1089,6 @@ product.29cm.co.kr##div > div > div > div:has-text(첫 가입)
 product.kyobobook.co.kr###scrollSpyProdEvent
 product.kyobobook.co.kr##.banner_free.product_detail_area
 product.kyobobook.co.kr##.product_keyword_pick.product_detail_area
-product.kyobobook.co.kr##.product_related.product_detail_area
-product.kyobobook.co.kr##.product_related_02.product_detail_area
 puma.com##.video_wrap
 quasarzone.com##.state-change-wrap
 quasarzone.com##[id^='venatus']
