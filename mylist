@@ -1,5 +1,5 @@
 ! Title: mylist
-! Version: 1.270x
+! Version: 1.271
 ! Description: my adblock rules
 
 
@@ -32,9 +32,10 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@$extension="隱藏網頁要求通知權限",domain=dcinside.com
 @@$extension="웹 사이트에서 이미지 해상도 오버레이 표시",domain=comic.naver.com|lezhin.com|toomics.com|toptoon.com|webtoon.kakao.com|page.kakao.com|series.naver.com|toptoon.com|toomics.com|babechat.ai
 @@$popup,domain=arca.live
-@@$stealth=1p-cookie,domain=naver.com|github.com|google.com
+@@$stealth=1p-cookie,domain=naver.com|github.com|google.com|arca.live
 @@$stealth=useragent,app=org.mozilla.firefox
 @@.kr^$extension="Immersive Translate - Translate Web & PDF"
+@@image$extension="Embed Me!"|"Embed us!"
 @@korea$extension="Immersive Translate - Translate Web & PDF"
 @@toki*.*/$extension="웹 사이트에서 이미지 해상도 오버레이 표시"|"Immersive Translate - Translate Web & PDF"
 @@toki*.*/$stealth=useragent
@@ -70,14 +71,13 @@ bntnews.co.kr##.align-center.youtubeWrap.image
 businesspost.co.kr###businesspeople
 businesspost.co.kr##.sideNav
 clien.net#%#//scriptlet('href-sanitizer', 'a[href^="https://link.coupang.com/"]')
-clien.net#%#//scriptlet('href-sanitizer', 'a[href^="https://s.click.aliexpress.com/"]')
+clien.net,damoang.net#%#//scriptlet('href-sanitizer', 'a[href*="aliexpress.com/"]')
 coolenjoy.net#%#//scriptlet('href-sanitizer', 'a[href^="https://coolenjoy.net/bbs/link2.php?"]')
 dailypharm.com###todayFocusSlider
 dailypharm.com##.N_sectionMenu:style(position:static!important;)
 dailypharm.com##.TopNav.top:style(position:static!important;)
 dailypharm.com##.container:style(padding-top: 0px !important;)
 dailypharm.com#@#.footer
-damoang.net#%#//scriptlet('href-sanitizer', 'a[href*="aliexpress.com"]')
 damoang.net#%#//scriptlet('href-sanitizer', 'a[href*="link.php?bo_table=economy"]')
 damoang.net#%#window.addEventListener('load',function(){var button=document.getElementById('economy-open-all-links');if(button){button.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var links=document.querySelectorAll('.text-truncate a');links.forEach(function(link){if(link.href){var newTab=document.createElement('a');newTab.href=link.href;newTab.target='_blank';newTab.rel='noopener noreferrer';newTab.style.display='none';document.body.appendChild(newTab);newTab.click();document.body.removeChild(newTab)}});return false},true)}});
 danawa.com###mdnw-main-bottomSheet-container
@@ -164,6 +164,7 @@ m.newskorea21.com###tree_line_1
 m.lotteimall.com###appdownPopTop
 m.lotteimall.com##.pd_recom
 m.sportalkorea.com###cot_tl_fixed1
+m.ssg.com##.template-grid-item .chakra-text:has-text(AD):upward(6):has(.chakra-icon)
 manatoki*.net###id_mbv
 maxmovie.com#%#//scriptlet('prevent-xhr', 'mtag.mman.kr')
 medium.com##div > div > div > div > div[class]:has-text(Sign up to discover human stories that deepen your understanding of the world.)
@@ -214,6 +215,7 @@ reddit.com###main-content > .absolute
 reddit.com##.thumbnail-blur:style(filter:none!important;)
 reddit.com##shreddit-async-loader.theme-beta:remove()
 reddit.com##xpromo-untagged-content-blocking-modal:remove()
+reddit.com#%#//scriptlet('hide-in-shadow-dom', '.prompt:has(> .viewInApp)')
 reuters.com##[class*='site-header__inner-sticky__']:style(position:static!important;)
 reuters.com##[class^='refinitiv-promo-bar__container__']
 ruliweb.com#%#//scriptlet('href-sanitizer', 'a[href*="bbs=1020"]')
@@ -445,7 +447,7 @@ $removeparam=t,domain=duckduckgo.com
 @@$stealth=useragent,domain=chromewebstore.google.com|microsoftedge.microsoft.com|addons.mozilla.org|store.whale.naver.com|galaxystore.samsung.com
 @@$stealth=useragent,domain=video.fc2.com|kbcard.com|gmarket.co.kr|auction.co.kr|app.link|kbanknow.com|claude.ai|on.lotteon.com
 @@$stealth=webrtc,domain=moeni.net
-@@/code$extension="Embed Me!"
+@@/code$extension="Embed Me!"|"Embed us!"
 @@||ad-img.gmarket.com^$domain=gmarket.co.kr|auction.co.kr
 @@||adtouch.adbrix.io^$app=com.kakao.talk
 @@||adxv.zum.com/view/$domain=hub.zum.com
@@ -472,7 +474,6 @@ $removeparam=t,domain=duckduckgo.com
 @@||img.hellocdn*.net^$stealth=referrer
 @@||ourhome.co.kr^$stealth=dpi
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=apkmirror.com|devliberty.blogspot.com
-@@||reddit.com^$removeparam=rdt
 @@||scr.nsmartad.com/admixer/$script,domain=yna.co.kr
 @@||sdk.privacy-center.org^$domain=france24.com
 @@||smartmediarep.com^$media,domain=donga.com|~mlbpark.donga.com
