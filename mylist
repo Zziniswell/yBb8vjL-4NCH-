@@ -1,5 +1,5 @@
 ! Title: mylist
-! Version: 1.270
+! Version: 1.270x
 ! Description: my adblock rules
 
 
@@ -13,10 +13,10 @@
 ##.moveTop
 ##[class$='btn-top']
 ##[class$='btn_top']
-##[class*='ubscri']:has-text(/구독|후원|기부/)
+##[class*='ubscri']:has-text(/후원|기부/)
 ##[class*='upport']:has-text(/구독|후원|기부/)
 ##[href*="/v.daum.net/channel/"]
-##[id*='ubscri']:has-text(/구독|후원|기부/)
+##[id*='ubscri']:has-text(/후원|기부/)
 ##[id*='upport']:has-text(/구독|후원|기부/)
 ##[src*="/a.magsrv.com/"]
 ##[src*="/adshare.kr/"]
@@ -134,17 +134,17 @@ kin.naver.com###eventPopupLayerNJob
 kin.naver.com##.expertRecommend
 klauncher.kr#%#//scriptlet('set-constant', '_0x3aa5', 'noopFunc')
 kmib.co.kr,ajunews.com,dongascience.com,sports.chosun.com##[id^='ad']
-kormedi.com#@#[class*='ubscri']:has-text(/구독|후원|기부/)
 lawissue.co.kr##.wrap > *:not([class]):not(div:nth-of-type(4))
 lawtimes.co.kr###__next > div > div:first-child:has(svg)
 lezhin.com##.cutLicense.cut
 lotteon.com##.recommendInfinitiWrap
 m.betanews.net##div#adshow
 m.blog.naver.com###blog_fe_feed > div:has-text(/다른 글|디깅하기|주제 더보기/)
-m.cafe.naver.com##div.item_wrap:has([style*='/1_150.svg']):has-text(/제휴|매입|삽니다|최고가/):style(opacity:0!important; pointer-events:none!important;)
 m.cafe.daum.net##li.nativead-placeholder
+m.cafe.naver.com##div.item_wrap:has([style*='/1_150.svg']):has-text(/제휴|매입|삽니다|최고가/):style(opacity:0!important; pointer-events:none!important;)
 m.cafe.naver.com##.CafeMain:has(.cafe_name:has-text(중고나라)) li:has([style*='/1_150.svg'])
 m.cafe.naver.com##.FloatingJoinButton.DefaultButton
+m.cafe.naver.com##.typo_title-large.BlockedMessage
 m.comic.naver.com##.type_seemore.ly_everyday
 m.coupang.com###MWEB_PRODUCT_DETAIL_ALSO_BOUGHT
 m.coupang.com###MWEB_PRODUCT_DETAIL_ALSO_VIEWS
@@ -154,7 +154,7 @@ m.coupang.com###MWEB_PRODUCT_DETAIL_ITEM_MID_CAROUSEL1
 m.coupang.com###MWEB_PRODUCT_DETAIL_LEGACY_INTRO_BANNER_FULL
 m.coupang.com###MWEB_PRODUCT_DETAIL_PROMOTION_CAROUSEL
 m.coupang.com###MWEB_PRODUCT_DETAIL_SPLASH_BOTTOM_SHEET
-m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|yna.co.kr|kmib.co.kr|거부함|거부자|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새|민주노총|찢갈이|goo.su|tok/)
+m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|yna.co.kr|kmib.co.kr|거부함|거부자|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새|민주노총|찢갈이|goo.su|tok|키작/)
 m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('<br>')[0].trim();link.setAttribute('href',url);});});
 m.dongascience.com###letter_apply
 m.dongascience.com###view_tag_news > .wrap
@@ -253,7 +253,7 @@ uptodown.com###uptodown-turbo-promo
 uptodown.com##div.ad
 urbandictionary.com##div.ad-panel
 vivaldi.net#@#.btn-top
-webtool.cusis.net#@#[class*='upport']:has-text(/구독|후원|기부/)
+webtool.cusis.net,kormedi.com,shilladfs.com@#[class*='upport']:has-text(/구독|후원|기부/)
 www.coupang.com###prod-detail-recommend
 www.coupang.com###promotionCarousel
 www.coupang.com###scItemList
@@ -429,12 +429,11 @@ $removeparam=t,domain=duckduckgo.com
 11toon*.com##.hide-m
 11toon*.com##.mobile > .btn-lg.btn-primary.btn
 11toon*.com##[href^="']) > .homelist-thumb
-29cm.co.kr##[href^="https://29cm.onelink.me/"]
 4kjav.co###adde_modal-modal
 4kjav.co###adde_modal-overlay
 @@$extension,domain=hanacard.co.kr|nicepay.co.kr|kbcard.com
 @@$extension="Disable WebGL API",domain=vidkidz.tistory.com
-@@$extension="Embed Me!",domain=yande.re|imgur.com|youtube.com|github.com|namu.wiki
+@@$extension="Embed Me!"|"Embed us!",domain=yande.re|imgur.com|youtube.com|github.com|namu.wiki
 @@$extension="Immersive Translate - Translate Web & PDF",app=com.kiwibrowser.browser|org.mozilla.firefox|com.lemurbrowser.exts|com.microsoft.emmx
 @@$extension="microShield",domain=ygosu.com|dogdrip.net|loawa.com|isplus.com|mlbpark.donga.com|etoday.co.kr|meeco.kr
 @@$generichide,domain=namu.wiki|meeco.kr
@@ -569,7 +568,7 @@ byline.network##.kt-row-column-wrap
 byline.network##.wp-block-kadence-column
 cafe.daum.net###mAside
 cafe.daum.net##.today_bubble
-cafe.daum.net,29cm.co.kr##.swiper-slide-active.swiper-slide
+cafe.daum.net##.swiper-slide-active.swiper-slide
 cafe.naver.com###articleFeedList
 cafe.naver.com##.bottom.banner_add
 cafe.naver.com##.popular_toast_popup
