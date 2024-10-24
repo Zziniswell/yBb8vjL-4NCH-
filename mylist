@@ -1,15 +1,12 @@
 ! Title: mylist
-! Version: 1.271x
+! Version: 1.272
 ! Description: my adblock rules
 
 
-###id_mbv
-###main-banner-view > div:first-child
 ##.alert_windows
-##.clearfix > li:has(> *:has-text(보증토토))
 ##.goBack
 ##.goTop
-##.m-advert-wrap.wrap
+##.go_top
 ##.moveTop
 ##[class$='btn-top']
 ##[class$='btn_top']
@@ -21,8 +18,6 @@
 ##[src*="/AD/"]
 ##[src*="/a.magsrv.com/"]
 ##[src*="/adshare.kr/"]
-##div.video-long-banner
-##li.treeview > .old:has-text(보증토토)
 #@#.appBanner:not(body)
 $removeparam=/^(jaehuid|cto_pld)=/,domain=gmarket.co.kr
 $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
@@ -56,6 +51,17 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@||onelink.me^$popup,doc
 @@||richtv*.com^$stealth=referrer
 @@||stacksocial.com^$cookie=ajs_anonymous_id
+[$domain=/^cookmana\d+.com/]##.m-advert-wrap.wrap
+[$domain=/^kktv\d+.com/]##div.modal_wrap
+[$domain=/^manatoki\d+.net/]##.basic-banner.row.row-10
+[$domain=/^manatoki\d+.net/]##.board-tail-banner
+[$domain=/^manatoki\d+.net/]##li.treeview > .old:has-text(보증토토)
+[$domain=/^manatoki\d+.net/]##[style="margin-bottom: 20px;"].row.row-15
+[$domain=/^manatoki\d+.net/]#?#ul[class] > li:has(> a[href^="/guarantee.php"])
+[$domain=/^newtoki\d+.com/]###main-banner-view > div:first-child
+[$domain=/^sptv\d+.com/]##div.modal_wrap
+[$domain=/^torrentbot\d+.com/]##.grid
+[$domain=/^tv\d+.wiki/]##div.video-long-banner
 a-ha.io##.ptr__children > div > div > [src]:upward(2)
 aagag.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 aagag.com#@#ins.adsbygoogle[data-ad-slot]
@@ -127,7 +133,6 @@ instiz.net#%#//scriptlet('href-sanitizer', 'a[href^="javascript:link"]')
 isplus.com##div.mt_40.py_40.bg_999.center_1024
 item.cjonstyle.com##.buy_info > .text
 item.cjonstyle.com##.pgm_banner
-javhd168.com#%#//scriptlet('set-constant', 'asVideoJson', 'emptyObj')
 joara.com##.book-preview-guide
 joara.com##.mw-view-guide-wrap.view-guide-wrap
 joara.com##.popup-swiper.react-modal-sheet-container
@@ -158,8 +163,10 @@ m.coupang.com###MWEB_PRODUCT_DETAIL_ITEM_MID_CAROUSEL1
 m.coupang.com###MWEB_PRODUCT_DETAIL_LEGACY_INTRO_BANNER_FULL
 m.coupang.com###MWEB_PRODUCT_DETAIL_PROMOTION_CAROUSEL
 m.coupang.com###MWEB_PRODUCT_DETAIL_SPLASH_BOTTOM_SHEET
-m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|yna.co.kr|kmib.co.kr|거부함|거부자|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새|민주노총|찢갈이|goo.su|tok|키작/)
-m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('<br>')[0].trim();link.setAttribute('href',url);});});
+m.dcinside.com##.gall-detail-lst > li:has-text(/메스이키|키작/)
+m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|거부함|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새|민주노총|찢갈이|goo.su|tok|투.표/)
+m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('
+')[0].trim();link.setAttribute('href',url);});});
 m.dongascience.com###letter_apply
 m.dongascience.com###view_tag_news > .wrap
 m.dongascience.com##.tag
@@ -169,7 +176,11 @@ m.lotteimall.com###appdownPopTop
 m.lotteimall.com##.pd_recom
 m.sportalkorea.com###cot_tl_fixed1
 m.ssg.com##.template-grid-item .chakra-text:has-text(AD):upward(6):has(.chakra-icon)
-manatoki*.net###id_mbv
+manatoki*.net##.basic-banner.row.row-10
+manatoki*.net##.board-tail-banner
+manatoki*.net##.clearfix > li:has(> *:has-text(보증토토))
+manatoki*.net##li.treeview > .old:has-text(보증토토)
+manatoki*.net##[style="margin-bottom: 20px;"].row.row-15
 maxmovie.com#%#//scriptlet('prevent-xhr', 'mtag.mman.kr')
 medium.com##div > div > div > div > div[class]:has-text(Sign up to discover human stories that deepen your understanding of the world.)
 mitem.gmarket.co.kr###smileFreshBtContainer
@@ -241,7 +252,7 @@ softonic.kr##[id*='-mpu-']
 sports.chosun.com###subrightall
 sports.chosun.com##.g-0.row > div:last-child
 sports.chosun.com##div[class$='-ad']
-sptv*.com,sptv24.com##div.modal_wrap
+sptv*.com,kktv*.com##div.modal_wrap
 startpage.com##.serp-toast-container:has-text(tracking)
 svc.soldout.co.kr##.blur-effect:style(filter:none!important;)
 svc.soldout.co.kr##.on-fixed-tab.tab-nav-wrap.divide-border-top-10:style(position:static!important;)
@@ -250,7 +261,7 @@ teamblind.com##.tag-actions
 techpress.co.kr##.custom-se-image-video-resource._gifmp4
 tilnote.io##.justify-between.items-center.flex.container-medium
 toptoon.com##.isbn_num_area
-torrentbot*.com,torrentbot162.com##.grid
+torrentbot*.com##.grid
 tribuna.com##[class^='BannerAlternative_banner__']
 tribuna.com##[class^='Main_main-layout__dugout__']
 tribuna.com##[class^='Main_main-layout__fixed-banners__']
@@ -261,7 +272,7 @@ uptodown.com###uptodown-turbo-promo
 uptodown.com##div.ad
 urbandictionary.com##div.ad-panel
 vivaldi.net#@#.btn-top
-webtool.cusis.net,kormedi.com,shilladfs.com@#[class*='upport']:has-text(/구독|후원|기부/)
+webtool.cusis.net,kormedi.com,shilladfs.com#@#[class*='upport']:has-text(/구독|후원|기부/)
 www.coupang.com###prod-detail-recommend
 www.coupang.com###promotionCarousel
 www.coupang.com###scItemList
@@ -358,7 +369,6 @@ unsafelink.com#%#window.addEventListener('load',function(){document.getElementBy
 ###glue-cookie-notification-bar-1
 ###go_top
 ###groobeeWrap
-###hd_pop
 ###livereAd
 ###main_popup
 ###mdnw-appInstallPopup-container
@@ -378,18 +388,14 @@ unsafelink.com#%#window.addEventListener('load',function(){document.getElementBy
 ##.go-top
 ##.grbLayer.grbDim
 ##.id_tour.grid_m
-##.mobile-padding
 ##.mobile_ad
 ##.move_top
 ##.moveback
 ##.movetop
 ##.power_link
 ##.scroll-to-top
-##.sns-share
-##.sns_area
 ##.story_banner
 ##.top_ad
-##.videoads
 ##[class^='ad-box']
 ##[class*='app-banner']
 ##[class*='app_install']
@@ -421,6 +427,20 @@ $removeparam=t,domain=duckduckgo.com
 /backpg/add_visit_log.cm
 /nlog.js
 /sbs_log_module.min.js
+[$domain=/^booktoki\d+.com/]###content_wrapper > div:nth-of-type(2)
+[$domain=/^frtoon\d+.com/]##div.container.mt-1.show.fade.alert-dismissible.alert-danger.alert
+[$domain=/^javhd\d+.com/]##[src$=".gif"]
+[$domain=/^javhd\d+.com/]#%#//scriptlet('set-constant', 'asVideoJson', 'emptyObj')
+[$domain=/^kktv\d+.com/]##.main_bannerbox
+[$domain=/^lover\d+.net/]###a45998g
+[$domain=/^lover\d+.net/]##.div-over
+[$domain=/^lover\d+.net/]##[src$=".gif"]
+[$domain=/^manatoki\d+.net/]###hd_pop
+[$domain=/^torrentpi\d+.com/]##.img-wrap:not([class]:has([src*='data/editor']))
+[$domain=/^tvmon\d+.org/]##.banner_wrap2
+[$domain=/^tvmon\d+.org/]##[class^='break-mobile']
+[$domain=/^tvmon\d+.org/]##.mobile-padding
+[$domain=/^yagong\d+.com/]##a.sm\:w-1\/4.p-0\.5.w-1\/2
 100ssd.co.kr##div.auto-marbtm-5.auto-martop-5
 11st.co.kr###cts > div.l-grid:nth-of-type(3) > .l-grid__row
 11st.co.kr###hotclick-recm-container-top
@@ -695,7 +715,7 @@ forbes.com##.zephr-backdrop.zephr-article-modal-backdrop
 forexlive.com##[class*='__outer-wrapper']
 forum.vivaldi.net###reconnect-alert
 france24.com##.m-block-ad
-frtoon*.com,frtoon241.com##div.container.mt-1.show.fade.alert-dismissible.alert-danger.alert
+frtoon*.com##div.container.mt-1.show.fade.alert-dismissible.alert-danger.alert
 g-enews.com##.adwiserInbox:upward(1)
 g-enews.com##[class*='add']
 gall.dcinside.com##.btn_nftbox
@@ -833,8 +853,7 @@ kinolights.com##.modal-layer
 kioskfo.asungcorp.com###rolling_main
 kissjav.com###player-advertising-mobile
 kissjav.com###player-fluid_logo_image
-kktv*.com,kktv06.com##.main_bannerbox
-kktv*.com,kktv06.com##div.modal_wrap
+kktv*.com##.main_bannerbox
 kokstock.com###kokstock-news-box
 kookje.co.kr###con_text > div
 kormedi.com##div[class='subscr-btn-box']
@@ -885,9 +904,8 @@ lotteon.com##div > .flag
 lotteon.com##div.banner_text_2by2.moduleWrap
 lotteon.com##div.more_middle_round_button.moduleWrap
 lover*.net,11toon*.com,javhd*.com##[src$=".gif"]
-lover*.net,lover937.net###a45998g
-lover*.net,lover937.net##.div-over
-lover937.net,ohli365.vip,javhd168.com##[src$=".gif"]
+lover*.net###a45998g
+lover*.net##.div-over
 lst914.tistory.com##.float-button-container
 lst914.tistory.com##figure.alignCenter.imageblock
 lst914.tistory.com##ul:not(ul:has(li> [href]))
@@ -1038,6 +1056,7 @@ novel.naver.com##.banner_main_wrap
 novelpia.com###novel_drawing > div:nth-of-type(2)
 novelpia.com###sub_sale_modal_v2
 ohli365.vip##div.exo2.col-sm-3.col-xs-6
+ohli365.vip##[src$=".gif"]
 ohmynews.com##.arrow_lt_w.icon.popular.moreatc
 ohmynews.com##.ch
 ohou.se##.production-selling-overview__promotion-banner
@@ -1268,7 +1287,7 @@ xhamster*.com,xhamster.com##div[class*='cookiesAnnounce-']
 xhamster*.com,xhamster.com,lawtimes.co.kr##[href*='utm_source']
 xvideos.com##.thumb-inside:has-text(AD)
 yachuk.com##.not_cookie
-yagong*.com,yagong80.com##a.sm\:w-1\/4.p-0\.5.w-1\/2
+yagong*.com##a.sm\:w-1\/4.p-0\.5.w-1\/2
 yahoo.co.jp###stream > div
 yahoo.co.jp##[class^='TimelineTargeting_TimelineTargeting__link__']
 yande.re##[src^='https://delivery.2d.net.co/']
