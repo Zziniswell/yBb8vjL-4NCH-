@@ -1,5 +1,5 @@
 ! Title: mylist
-! Version: 1.272x
+! Version: 1.272y
 ! Description: my adblock rules
 
 
@@ -36,6 +36,7 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@korea$extension="Immersive Translate - Translate Web & PDF"
 @@toki*.*/$extension="웹 사이트에서 이미지 해상도 오버레이 표시"|"Immersive Translate - Translate Web & PDF"
 @@toki*.*/$stealth=useragent
+@@|192.168.0.1^$stealth=dpi
 @@||ads.mtgroup.kr/RealMedia/ads/adstream_sx.ads/zdnet_mobile/news@x05$xhr,domain=zdnet.co.kr
 @@||api2.branch.io^$app=com.reddit.frontpage|com.spotify.music
 @@||app.adjust.world^$app=com.spotify.music
@@ -51,6 +52,7 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@||onelink.me^$popup,doc
 @@||richtv*.com^$stealth=referrer
 @@||stacksocial.com^$cookie=ajs_anonymous_id
+@@||tistpry.com^$stealth=referrer
 [$domain=/^cookmana\d+.com/]##.m-advert-wrap.wrap
 [$domain=/^kktv\d+.com/|/^sptv\d+.com/]##div.modal_wrap
 [$domain=/^manatoki\d+.net/]##.board-tail-banner
@@ -81,10 +83,6 @@ businesspost.co.kr##.sideNav
 clien.net#%#//scriptlet('href-sanitizer', 'a[href^="https://link.coupang.com/"]')
 clien.net,damoang.net#%#//scriptlet('href-sanitizer', 'a[href*="aliexpress.com/"]')
 coolenjoy.net#%#//scriptlet('href-sanitizer', 'a[href^="https://coolenjoy.net/bbs/link2.php?"]')
-dailypharm.com###todayFocusSlider
-dailypharm.com##.N_sectionMenu:style(position:static!important;)
-dailypharm.com##.TopNav.top:style(position:static!important;)
-dailypharm.com##.container:style(padding-top: 0px !important;)
 dailypharm.com#@#.footer
 damoang.net#%#//scriptlet('href-sanitizer', 'a[href*="link.php?bo_table=economy"]')
 damoang.net#%#window.addEventListener('load',function(){var button=document.getElementById('economy-open-all-links');if(button){button.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var links=document.querySelectorAll('.text-truncate a');links.forEach(function(link){if(link.href){var newTab=document.createElement('a');newTab.href=link.href;newTab.target='_blank';newTab.rel='noopener noreferrer';newTab.style.display='none';document.body.appendChild(newTab);newTab.click();document.body.removeChild(newTab)}});return false},true)}});
@@ -133,6 +131,8 @@ instiz.net#%#//scriptlet('href-sanitizer', 'a[href^="javascript:link"]')
 isplus.com##div.mt_40.py_40.bg_999.center_1024
 item.cjonstyle.com##.buy_info > .text
 item.cjonstyle.com##.pgm_banner
+japanhub.net##.my-2.container
+japanhub.net##.text-center.row
 joara.com##.book-preview-guide
 joara.com##.mw-view-guide-wrap.view-guide-wrap
 joara.com##.popup-swiper.react-modal-sheet-container
@@ -147,6 +147,7 @@ lawissue.co.kr##.wrap > *:not([class]):not(div:nth-of-type(4))
 lawtimes.co.kr###__next > div > div:first-child:has(svg)
 lezhin.com##.cutLicense.cut
 lotteon.com##.recommendInfinitiWrap
+lover*.net##.bd_pg > div
 m.betanews.net##div#adshow
 m.blog.naver.com###blog_fe_feed > div:has-text(/다른 글|디깅하기|주제 더보기/)
 m.cafe.daum.net##li.nativead-placeholder
@@ -163,6 +164,10 @@ m.coupang.com###MWEB_PRODUCT_DETAIL_ITEM_MID_CAROUSEL1
 m.coupang.com###MWEB_PRODUCT_DETAIL_LEGACY_INTRO_BANNER_FULL
 m.coupang.com###MWEB_PRODUCT_DETAIL_PROMOTION_CAROUSEL
 m.coupang.com###MWEB_PRODUCT_DETAIL_SPLASH_BOTTOM_SHEET
+m.dailypharm.com###todayFocusSlider
+m.dailypharm.com##.N_sectionMenu:style(position:static!important;)
+m.dailypharm.com##.TopNav.top:style(position:static!important;)
+m.dailypharm.com##.container:style(margin-top: -1px !important;)
 m.dcinside.com##.gall-detail-lst > li:has-text(/메스이키|키작/)
 m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|거부함|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새|민주노총|찢갈이|goo.su|tok|투.표/)
 m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('')[0].trim();link.setAttribute('href',url);});});
@@ -290,6 +295,7 @@ zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.
 ||insight.danawa.com/InsightTrk/tracker^
 ||js.monitor.azure.com^
 ||kimppan.com/api/user/CreateVisitLog
+||maxmovie.com/_next/static/chunks/framework.aa400efa16f23e2b0cfe.js
 ||my.musinsa.com/api/member/v1/login-status$xhr
 ||naver.com/jackpotlog/*/logs$xhr
 ||ni.naver.com^
@@ -313,7 +319,7 @@ zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.
 ! arca.live,blog.naver.com,cafe.naver.com#%#(function(){'use strict';var erudaLoaded=false,erudaScript=null;function loadEruda(){if(!erudaLoaded){erudaScript=document.createElement('script');erudaScript.src="//cdn.jsdelivr.net/npm/eruda";document.body.appendChild(erudaScript);erudaScript.onload=function(){eruda.init();eruda.show();erudaLoaded=true;localStorage.setItem('erudaLoaded','true');};}}function unloadEruda(){if(erudaLoaded){eruda.destroy();document.body.removeChild(erudaScript);erudaScript=null;erudaLoaded=false;localStorage.setItem('erudaLoaded','false');}}var touchTimeout;document.addEventListener('touchstart',function(e){if(e.touches.length===2){touchTimeout=setTimeout(function(){erudaLoaded?unloadEruda():loadEruda();},2000);}});document.addEventListener('touchend',function(){if(touchTimeout){clearTimeout(touchTimeout);}});document.addEventListener('keydown',function(e){if(e.ctrlKey&&e.shiftKey&&e.key==='R'){erudaLoaded?unloadEruda():loadEruda();}});if(localStorage.getItem('erudaLoaded')==='true'){loadEruda();}})();
 ! Novelpia Arrow key Pager
 novelpia.com#%#(function(){'use strict';document.addEventListener('keydown',function(event){if(event.keyCode==37){var prevButton=document.querySelector('span.footer_btn:nth-of-type(1)');if(prevButton){prevButton.click();}}else if(event.keyCode==39){var nextButton=document.querySelector('div.menu-next-item');if(nextButton){nextButton.click();}}});})();
-! Prevent 11st.co.kr links from switching to apps
+! Prevent m.11st.co.kr links from switching to apps
 fmkorea.com,eomisae.co.kr,arca.live,ruliweb.com,clien.net,damoang.net,coolenjoy.net,quasarzone.com#%#document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('a').forEach(l=>{let u=l.getAttribute('href');u&&u.includes('11st.co.kr')&&(u=u.split('/share')[0])!==l.getAttribute('href')&&l.setAttribute('href',u);});});
 ! Remove text formatting when copying
 #%#document.addEventListener('copy',e=>{e.preventDefault();e.clipboardData.setData('text/plain',window.getSelection().toString().replace(/<[^>]*>/g,'').replace(/[^\S\n]+/g,' ').split('\n').map(l=>l.trim()).join('\n').replace(/\n{3,}/g,'\n\n'));});
@@ -396,7 +402,6 @@ unsafelink.com#%#window.addEventListener('load',function(){document.getElementBy
 ##[class^='ad-box']
 ##[class*='app-banner']
 ##[class*='app_install']
-##[class^='juicyads']
 ##[href*="//ipns.kr/"]
 ##[href*="//ipns.kr/"]:upward(1)
 ##[href*="//media.naver.com/channel/promotion"]
@@ -406,7 +411,6 @@ unsafelink.com#%#window.addEventListener('load',function(){document.getElementBy
 ##[id*='powerLink']
 ##[src*="/bannerpop/"]
 ##[src*="coupangcdn.com/"]
-##[src*='yanovideos.com/banners/']
 ##cloudflare-app
 ##div.ad-adsense.js-ad-slot
 #@##fusion-app footer
@@ -430,12 +434,15 @@ $removeparam=t,domain=duckduckgo.com
 [$domain=/^javhd\d+.com/]#%#//scriptlet('set-constant', 'asVideoJson', 'emptyObj')
 [$domain=/^kktv\d+.com/]##.main_bannerbox
 [$domain=/^lover\d+.net/]###a45998g
+[$domain=/^lover\d+.net/]##.bd_pg > div
 [$domain=/^lover\d+.net/]##.div-over
+[$domain=/^lover\d+.net/]##[class^='juicyads']
 [$domain=/^torrentpi\d+.com/]##.img-wrap:not([class]:has([src*='data/editor']))
 [$domain=/^tvmon\d+.org/]##.banner_wrap2
 [$domain=/^tvmon\d+.org/]##[class^='break-mobile']
 [$domain=/^tvmon\d+.org/]##.mobile-padding
 [$domain=/^yagong\d+.com/]##a.sm\:w-1\/4.p-0\.5.w-1\/2
+[$domain=/^yagong\d+.com/]##[src*='yanovideos.com/banners/']
 100ssd.co.kr##div.auto-marbtm-5.auto-martop-5
 11st.co.kr###cts > div.l-grid:nth-of-type(3) > .l-grid__row
 11st.co.kr###hotclick-recm-container-top
@@ -1050,8 +1057,6 @@ novel.naver.com##.aside_comments
 novel.naver.com##.banner_main_wrap
 novelpia.com###novel_drawing > div:nth-of-type(2)
 novelpia.com###sub_sale_modal_v2
-ohli365.vip##div.exo2.col-sm-3.col-xs-6
-ohli365.vip##[src$=".gif"]
 ohmynews.com##.arrow_lt_w.icon.popular.moreatc
 ohmynews.com##.ch
 ohou.se##.production-selling-overview__promotion-banner
@@ -1327,7 +1332,6 @@ zum.com##.show.btn-app-go
 ||adservice.google.com^
 ||adtouch.adbrix.io^
 ||advertads.*.com^
-||advimg.ad-mapps.com^$domain=~maxmovie.com
 ||aedi.ai^
 ||amplitude.com^$important
 ||apac.presence.teams.microsoft.com/*/reportmyactivity/
