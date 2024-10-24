@@ -1,5 +1,5 @@
 ! Title: mylist
-! Version: 1.272y
+! Version: 1.273
 ! Description: my adblock rules
 
 
@@ -29,7 +29,7 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@$extension="隱藏網頁要求通知權限",domain=dcinside.com
 @@$extension="웹 사이트에서 이미지 해상도 오버레이 표시",domain=comic.naver.com|lezhin.com|toomics.com|toptoon.com|webtoon.kakao.com|page.kakao.com|series.naver.com|toptoon.com|toomics.com|babechat.ai
 @@$popup,domain=arca.live
-@@$stealth=1p-cookie,domain=naver.com|github.com|google.com|arca.live
+@@$stealth=1p-cookie,domain=naver.com|github.com|google.com|arca.live|epicgames.com
 @@$stealth=useragent,app=org.mozilla.firefox
 @@.kr^$extension="Immersive Translate - Translate Web & PDF"
 @@image$extension="Embed Me!"|"Embed us!"
@@ -103,6 +103,9 @@ etoland.co.kr###bottomBanner
 etoland.co.kr##[src^="/data/daumeditor"]
 forbes.com##[id^='-ad-']
 game.naver.com##[class^='naverAlarm_popupNaverAlarm__']
+ggul.zal.kr###inner-content-body:style(height: auto !important; max-height: none !important; overflow: visible !important;)
+ggul.zal.kr##.inside-content-background-gradient
+ggul.zal.kr##.partners-inside
 ggul.zal.kr#%#window.onload=function(){(function(){"use strict";const v=document.getElementById("bo_v_atc")||document.getElementById("inner-content-body");if(v){v.classList.remove("omit_wrap","hided");v.style.maxHeight="unset";}})();};
 ggulmo.com##div.css-1ct6olp
 github.com#%#//scriptlet('href-sanitizer', 'a[href^="https://adguardteam.github.io/AnonymousRedirect/redirect.html"]')
@@ -143,7 +146,11 @@ kin.naver.com###eventPopupLayerNJob
 kin.naver.com##.expertRecommend
 klauncher.kr#%#//scriptlet('set-constant', '_0x3aa5', 'noopFunc')
 kmib.co.kr,ajunews.com,dongascience.com,sports.chosun.com##[id^='ad']
+kream.co.kr##.layer_alert_login
 lawissue.co.kr##.wrap > *:not([class]):not(div:nth-of-type(4))
+lawtalk.co.kr##.qna-list__ad-google-preview:style(height: auto !important; max-height: none !important; overflow: visible !important;)
+lawtalk.co.kr##.qna-list__normal-answer-preview
+lawtalk.co.kr##[class^='answer-']:style(filter:none!important;)
 lawtimes.co.kr###__next > div > div:first-child:has(svg)
 lezhin.com##.cutLicense.cut
 lotteon.com##.recommendInfinitiWrap
@@ -219,7 +226,7 @@ nsmall.com##.banner-inner
 nsmall.com##.kakaotalk-wrap
 nsmall.com##.modal-floating-center.center.layer-wrap
 nsmall.com##.top-banner-wrap
-nsmall.com,display.cjonstyle.com##body,html:style(overflow:auto!important)
+nsmall.com,display.cjonstyle.com,yachuk.com##body,html:style(overflow:auto!important)
 ohmynews.com##.slide_bnbox:upward(3)
 ohmynews.com##div:not([id]):not([class]):nth-of-type(1)
 orders.pay.naver.com##div.content-recommend
@@ -247,7 +254,8 @@ shopping.naver.com###userInformation
 shopping.naver.com##[class^='RecommendSection_recommend_section__']
 shopping.naver.com##[class^='_footer_shortcut_area_']
 si.com##.m-in-content-ad-row
-smartinpress.com##.copas_btn
+smartinpress.com,momkim.co.kr##.copas_btn
+smartinpress.com,momkim.co.kr##.not_cookie:style(height: auto !important; max-height: none !important; overflow: visible !important;)
 smartinpress.com#%#//scriptlet('remove-class', 'not_cookie', '*[class*="not_cookie"]')
 smile.hanjin.co.kr##[src^="images/promotion.png"]
 softonic.kr###native-notificationbar-wrapper
@@ -670,7 +678,6 @@ deviantart.com##div[class]:has-text(Join the world's largest art community and g
 devjhs.tistory.com##.contents_style.tt_article_useless_p_margin > div:last-child
 dhlottery.co.kr###main_banner
 dlsite.com##.cp_bn_list
-doctornow.co.kr##div > div:has-text(앱 다운로드)
 doctornow.co.kr,humors.zigcou.com,novelpia.com###modal
 dogdrip.net##.ddnad-board.ddnad-top.ddnad.ed
 dogdrip.net##.ddnad-top.ddnad
@@ -871,7 +878,6 @@ lawandgood.com###modal > div
 lawtalk.co.kr##.normal-answer-preview__wrap
 lawtalk.co.kr##.opened.bottom-sheet-wrap > .with-mobile-bottom-tab.bottom-sheet
 lawtalk.co.kr##.qna-article-banner
-lawtalk.co.kr##[class*='hackle-iam-modal__overlay']
 lawtalk.co.kr##mobile-bottom-tab
 lawtimes.co.kr##[href^='http']:not([href*="lawtimes.co.kr"])
 lawtimes.co.kr##div:has-text(리걸 에듀):not(div:has([href])):upward(2)
