@@ -1,5 +1,5 @@
 ! Title: mylist
-! Version: 1.271
+! Version: 1.271x
 ! Description: my adblock rules
 
 
@@ -18,8 +18,10 @@
 ##[href*="/v.daum.net/channel/"]
 ##[id*='ubscri']:has-text(/후원|기부/)
 ##[id*='upport']:has-text(/구독|후원|기부/)
+##[src*="/AD/"]
 ##[src*="/a.magsrv.com/"]
 ##[src*="/adshare.kr/"]
+##div.video-long-banner
 ##li.treeview > .old:has-text(보증토토)
 #@#.appBanner:not(body)
 $removeparam=/^(jaehuid|cto_pld)=/,domain=gmarket.co.kr
@@ -93,6 +95,8 @@ display.cjonstyle.com###wrap > .goto_app_layer_popup
 dmitory.com##[class^='google_']
 donga.com###app_msg
 duckduckgo.com##.footer > div:nth-of-type(1)
+etoland.co.kr###bottomBanner
+etoland.co.kr##[src^="/data/daumeditor"]
 forbes.com##[id^='-ad-']
 game.naver.com##[class^='naverAlarm_popupNaverAlarm__']
 ggul.zal.kr#%#window.onload=function(){(function(){"use strict";const v=document.getElementById("bo_v_atc")||document.getElementById("inner-content-body");if(v){v.classList.remove("omit_wrap","hided");v.style.maxHeight="unset";}})();};
@@ -251,6 +255,8 @@ tribuna.com##[class^='BannerAlternative_banner__']
 tribuna.com##[class^='Main_main-layout__dugout__']
 tribuna.com##[class^='Main_main-layout__fixed-banners__']
 tribuna.com##[id*='ScriptRoot']
+tvhot.blog##.object-cover:upward(3)
+tv*.wiki##div.video-long-banner
 uptodown.com###uptodown-turbo-promo
 uptodown.com##div.ad
 urbandictionary.com##div.ad-panel
@@ -669,7 +675,6 @@ erdcloud.com###sgdpr-box
 ero-anime.website,asmr-labo.com##[id^='custom_html-']
 errornight.com###dq > div
 etnews.com###trans_div
-etoland.co.kr###mw_mobile > [href^="/plugin/mobile/board.php"]
 etoland.co.kr###store_all
 fallcent.com##.floating-button
 fanbox.cc##[class*='HeaderConfirmation__Wrapper']
@@ -1043,7 +1048,7 @@ oliveyoung.co.kr###curation_wrap
 oliveyoung.co.kr##section[class^='Home_band-banner__']
 oliveyoung.co.kr,yako.*,yako.pro,community.brave.com###banner
 onefootball.com##div[class*='googleAdsPlaceholder']
-onlineconvertfree.com,video.fc2.com,biz.newdaily.co.kr,newstree.kr,seoul.co.kr,bntnews.co.kr##.banner
+onlineconvertfree.com,video.fc2.com,biz.newdaily.co.kr,newstree.kr,seoul.co.kr,bntnews.co.kr,tvwiki.vip##.banner
 orders.pay.naver.com##[class^='SkeletonBannerWrapper_']
 orders.pay.naver.com##div[class^='PanelWrapper_area-panel_']
 ottogimall.co.kr###ch-plugin
