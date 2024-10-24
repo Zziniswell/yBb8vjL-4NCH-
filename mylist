@@ -1,5 +1,5 @@
 ! Title: mylist
-! Version: 1.272
+! Version: 1.272x
 ! Description: my adblock rules
 
 
@@ -52,25 +52,25 @@ $removeparam=/^(ptnCd|referrer)=/,domain=nsmall.com
 @@||richtv*.com^$stealth=referrer
 @@||stacksocial.com^$cookie=ajs_anonymous_id
 [$domain=/^cookmana\d+.com/]##.m-advert-wrap.wrap
-[$domain=/^kktv\d+.com/]##div.modal_wrap
-[$domain=/^manatoki\d+.net/]##.basic-banner.row.row-10
+[$domain=/^kktv\d+.com/|/^sptv\d+.com/]##div.modal_wrap
 [$domain=/^manatoki\d+.net/]##.board-tail-banner
-[$domain=/^manatoki\d+.net/]##li.treeview > .old:has-text(보증토토)
-[$domain=/^manatoki\d+.net/]##[style="margin-bottom: 20px;"].row.row-15
-[$domain=/^manatoki\d+.net/]#?#ul[class] > li:has(> a[href^="/guarantee.php"])
+[$domain=/^manatoki\d+.net/|/^newtoki\d+.com/]##.basic-banner.row.row-10
+[$domain=/^manatoki\d+.net/|/^newtoki\d+.com/]##[style="margin-bottom: 20px;"].row.row-15
+[$domain=/^manatoki\d+.net/|/^newtoki\d+.com/]##li.treeview > .old:has-text(보증토토)
+[$domain=/^manatoki\d+.net/|/^newtoki\d+.com/]#?#ul[class] > li:has(> a[href^="/guarantee.php"])
+[$domain=/^manatoki\d+.net/|/^newtoki\d+.com/|/^booktoki\d+.com/]#%#//scriptlet('abort-current-inline-script', 'oncontextmenu')
 [$domain=/^newtoki\d+.com/]###main-banner-view > div:first-child
-[$domain=/^sptv\d+.com/]##div.modal_wrap
 [$domain=/^torrentbot\d+.com/]##.grid
 [$domain=/^tv\d+.wiki/]##div.video-long-banner
 a-ha.io##.ptr__children > div > div > [src]:upward(2)
 aagag.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 aagag.com#@#ins.adsbygoogle[data-ad-slot]
 adguard.com##.flash-wrapper-wrap
+akomnews.com##.m_banner01
 aladin.co.kr###w_t_event
 arca.live##[href^="https://wall.smaad.net/wall/"]
 arca.live#%#function updateExternalLinks(){document.querySelectorAll('a.external').forEach(function(a){var h=a.href;if(h.startsWith('https://unsafelink.com/')){a.href=h.replace('https://unsafelink.com/','').replace(/^http:\/\//,'https://')}})}window.addEventListener('load',updateExternalLinks);window.addEventListener('hashchange',updateExternalLinks);
 arca.live#%#window.addEventListener('load',function(){document.querySelectorAll('a.external').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();window.location.href=this.href})});var removeModal=function(){var m=document.querySelector('.microModal');m&&m.parentNode.removeChild(m)};removeModal();new MutationObserver(function(mutations){mutations.forEach(function(){removeModal()})}).observe(document.body,{childList:true,subtree:true})});
-akomnews.com##.m_banner01
 auction.co.kr##.component--sponsor_link.component
 auction.co.kr##.vip-togetheritems
 betanews.net###csource
@@ -150,10 +150,10 @@ lotteon.com##.recommendInfinitiWrap
 m.betanews.net##div#adshow
 m.blog.naver.com###blog_fe_feed > div:has-text(/다른 글|디깅하기|주제 더보기/)
 m.cafe.daum.net##li.nativead-placeholder
-m.cafe.naver.com##div.item_wrap:has([style*='/1_150.svg']):has-text(/제휴|매입|삽니다|최고가/):style(opacity:0!important; pointer-events:none!important;)
 m.cafe.naver.com##.CafeMain:has(.cafe_name:has-text(중고나라)) li:has([style*='/1_150.svg'])
 m.cafe.naver.com##.FloatingJoinButton.DefaultButton
 m.cafe.naver.com##.typo_title-large.BlockedMessage
+m.cafe.naver.com##div.item_wrap:has([style*='/1_150.svg']):has-text(/제휴|매입|삽니다|최고가/):style(opacity:0!important; pointer-events:none!important;)
 m.comic.naver.com##.type_seemore.ly_everyday
 m.coupang.com###MWEB_PRODUCT_DETAIL_ALSO_BOUGHT
 m.coupang.com###MWEB_PRODUCT_DETAIL_ALSO_VIEWS
@@ -165,22 +165,21 @@ m.coupang.com###MWEB_PRODUCT_DETAIL_PROMOTION_CAROUSEL
 m.coupang.com###MWEB_PRODUCT_DETAIL_SPLASH_BOTTOM_SHEET
 m.dcinside.com##.gall-detail-lst > li:has-text(/메스이키|키작/)
 m.dcinside.com##[id^='comment_cnt_']:has-text(/투표함|믕|위잉위잉|북한은 정말로 가난할까|앱테크|추천인|deco|밍밍|거.부|리자이밍|bit.ly|itss|민주당원|룬재앙|거부함|투표.|만원받아가세요|뎨코|위잉위잉|메스이키쉐프|오등분의사다새|민주노총|찢갈이|goo.su|tok|투.표/)
-m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('
-')[0].trim();link.setAttribute('href',url);});});
+m.dcinside.com#%#document.addEventListener('DOMContentLoaded',function(){const links=document.querySelectorAll('a.cmturl');links.forEach(link=>{let url=link.getAttribute('href');url=url.split('')[0].trim();link.setAttribute('href',url);});});
 m.dongascience.com###letter_apply
 m.dongascience.com###view_tag_news > .wrap
 m.dongascience.com##.tag
 m.inven.co.kr###invenAppSuggestion
-m.newskorea21.com###tree_line_1
 m.lotteimall.com###appdownPopTop
 m.lotteimall.com##.pd_recom
+m.newskorea21.com###tree_line_1
 m.sportalkorea.com###cot_tl_fixed1
 m.ssg.com##.template-grid-item .chakra-text:has-text(AD):upward(6):has(.chakra-icon)
-manatoki*.net##.basic-banner.row.row-10
 manatoki*.net##.board-tail-banner
-manatoki*.net##.clearfix > li:has(> *:has-text(보증토토))
-manatoki*.net##li.treeview > .old:has-text(보증토토)
-manatoki*.net##[style="margin-bottom: 20px;"].row.row-15
+manatoki*.net,newtoki*.net##.basic-banner.row.row-10
+manatoki*.net,newtoki*.net##.clearfix > li:has(> *:has-text(보증토토))
+manatoki*.net,newtoki*.net##[style="margin-bottom: 20px;"].row.row-15
+manatoki*.net,newtoki.net##li.treeview > .old:has-text(보증토토)
 maxmovie.com#%#//scriptlet('prevent-xhr', 'mtag.mman.kr')
 medium.com##div > div > div > div > div[class]:has-text(Sign up to discover human stories that deepen your understanding of the world.)
 mitem.gmarket.co.kr###smileFreshBtContainer
@@ -192,9 +191,9 @@ moeni.net##.bi-telegram.bi:upward(3)
 moeni.net##.show.modal.fade
 msn.com##end-of-content-block
 muko.kr##.xe-widget-wrapper > div:has([src$='.jpg']):has([href^='/ad'])
+musinsa.com###commonLayoutContainer:style(padding-top:0px!important;)
 musinsa.com##.gtm-impression-content:has-text(연관 콘텐츠)
 musinsa.com##.gtm-impression-popup
-musinsa.com###commonLayoutContainer:style(padding-top:0px!important;)
 mybox.naver.com###guide_banner
 namu.wiki#@#div:not([class*=" "]) ~ div div + div[class]:has(> div[id][class]):not(:has(div[class*=" "] > span))
 namu.wiki,~en.namu.wiki,~board.namu.wiki##[class]:empty:only-child:not(div):not([src]):not([href]):upward(4):has([href*='/w/']):not(*:has(input))
@@ -266,12 +265,13 @@ tribuna.com##[class^='BannerAlternative_banner__']
 tribuna.com##[class^='Main_main-layout__dugout__']
 tribuna.com##[class^='Main_main-layout__fixed-banners__']
 tribuna.com##[id*='ScriptRoot']
-tvhot.blog##.object-cover:upward(3)
 tv*.wiki##div.video-long-banner
+tvhot.blog##.object-cover:upward(3)
 uptodown.com###uptodown-turbo-promo
 uptodown.com##div.ad
 urbandictionary.com##div.ad-panel
 vivaldi.net#@#.btn-top
+webtool.cusis.net##.content-area:style(margin-top:-30px!important;)
 webtool.cusis.net,kormedi.com,shilladfs.com#@#[class*='upport']:has-text(/구독|후원|기부/)
 www.coupang.com###prod-detail-recommend
 www.coupang.com###promotionCarousel
@@ -307,10 +307,6 @@ zdnet.co.kr#@$#body > div[id^="A1_"][style*="height:"] ~ #wrap { margin-top: -1.
 !
 !! Userscript Modules
 !
-! Disable anti right-click for manatoki
-#%#//scriptlet('abort-current-inline-script', 'oncontextmenu')
-! Change Font to Pretendard-Medium
-! #%#(function(){'use strict';const style=document.createElement('style');style.innerHTML=`@font-face {font-family: 'Pretendard-Medium';src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff') format('woff'); font-weight: 500;font-style: normal;}*:not([class^="fa"], [class*=" fa-"], [class^="icon"], [class*=" icon-"]) {font-family: 'Pretendard-Medium', sans-serif !important;}`;document.head.appendChild(style);})();
 ! F11 for Fullscreen
 #%#(function(){'use strict';document.addEventListener("keydown",function(e){(e.which||e.keyCode)==122&&document.fullscreenEnabled&&(document.fullscreenElement?document.exitFullscreen&&document.exitFullscreen():document.documentElement.requestFullscreen())})})();
 ! Inject Eruda dev tool
@@ -369,6 +365,7 @@ unsafelink.com#%#window.addEventListener('load',function(){document.getElementBy
 ###glue-cookie-notification-bar-1
 ###go_top
 ###groobeeWrap
+###hd_pop
 ###livereAd
 ###main_popup
 ###mdnw-appInstallPopup-container
@@ -429,13 +426,11 @@ $removeparam=t,domain=duckduckgo.com
 /sbs_log_module.min.js
 [$domain=/^booktoki\d+.com/]###content_wrapper > div:nth-of-type(2)
 [$domain=/^frtoon\d+.com/]##div.container.mt-1.show.fade.alert-dismissible.alert-danger.alert
-[$domain=/^javhd\d+.com/]##[src$=".gif"]
+[$domain=/^javhd\d+.com/|/^lover\d+.net/]##[src$=".gif"]
 [$domain=/^javhd\d+.com/]#%#//scriptlet('set-constant', 'asVideoJson', 'emptyObj')
 [$domain=/^kktv\d+.com/]##.main_bannerbox
 [$domain=/^lover\d+.net/]###a45998g
 [$domain=/^lover\d+.net/]##.div-over
-[$domain=/^lover\d+.net/]##[src$=".gif"]
-[$domain=/^manatoki\d+.net/]###hd_pop
 [$domain=/^torrentpi\d+.com/]##.img-wrap:not([class]:has([src*='data/editor']))
 [$domain=/^tvmon\d+.org/]##.banner_wrap2
 [$domain=/^tvmon\d+.org/]##[class^='break-mobile']
